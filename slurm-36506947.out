@@ -1,0 +1,5 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/anndata/_core/anndata.py:1828: UserWarning: Observation names are not unique. To make them unique, call `.obs_names_make_unique`.
+  utils.warn_names_duplicates("obs")
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/anndata/_core/anndata.py:1830: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates("var")
+slurmstepd: error: *** JOB 36506947 ON gpu008 CANCELLED AT 2022-12-24T18:47:35 ***

@@ -20,7 +20,6 @@ from performer_pytorch import PerformerLM
 import scanpy as sc
 import anndata as ad
 from utils import *
-import pickle as pkl
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--bin_num", type=int, default=5, help='Number of bins.')
@@ -32,8 +31,6 @@ parser.add_argument("--unassign_thres", type=float, default=0.5, help='The confi
 parser.add_argument("--pos_embed", type=bool, default=True, help='Using Gene2vec encoding or not.')
 parser.add_argument("--data_path", type=str, default='./data/Zheng68K.h5ad', help='Path of data for predicting.')
 parser.add_argument("--model_path", type=str, default='./finetuned.pth', help='Path of finetuned model.')
-
-args = parser.parse_args()
 
 SEED = args.seed
 EPOCHS = args.epoch
@@ -74,12 +71,7 @@ class Identity(torch.nn.Module):
         return x
 
 data = sc.read_h5ad(args.data_path)
-#load the label stored during the fine-tune stage
-with open('label_dict', 'rb') as fp:
-    label_dict = pkl.load(fp)
-with open('label', 'rb') as fp:
-    label = pkl.load(fp)
-
+label_dict, label = np.unique(np.array(data.obs['celltype']), return_inverse=True)
 class_num = np.unique(label, return_counts=True)[1].tolist()
 class_weight = torch.tensor([(1 - (x / sum(class_num))) ** 2 for x in class_num])
 label = torch.from_numpy(label)

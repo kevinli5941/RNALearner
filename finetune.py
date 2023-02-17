@@ -22,11 +22,10 @@ from torch.utils.data.distributed import DistributedSampler
 from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.distributed as dist
 
-from performer_pytorch import PerformerLM
+from performer_pytorch_v2 import PerformerLM
 import scanpy as sc
 import anndata as ad
 from utils import *
-import pickle as pkl
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--local_rank", type=int, default=-1, help='Local process rank.')
@@ -122,11 +121,6 @@ class Identity(torch.nn.Module):
 
 data = sc.read_h5ad(args.data_path)
 label_dict, label = np.unique(np.array(data.obs['celltype']), return_inverse=True)  # Convert strings categorical to integrate categorical, and label_dict[label] can be restored
-#store the label dict and label for prediction
-with open('label_dict', 'wb') as fp:
-    pkl.dump(label_dict, fp)
-with open('label', 'wb') as fp:
-    pkl.dump(label, fp)
 class_num = np.unique(label, return_counts=True)[1].tolist()
 class_weight = torch.tensor([(1 - (x / sum(class_num))) ** 2 for x in class_num])
 label = torch.from_numpy(label)
@@ -235,7 +229,7 @@ for i in range(1, EPOCHS+1):
         with torch.no_grad():
             for index, (data_v, labels_v) in enumerate(val_loader):
                 index += 1
-                data_v, labels_v = data_v.to(device), labels_v.to(device)
+                data_v, labels_v = data.to(device), labels.to(device)
                 logits = model(data_v)
                 loss = loss_fn(logits, labels_v)
                 running_loss += loss.item()

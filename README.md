@@ -2,7 +2,7 @@
 
 [![python >3.6.8](https://img.shields.io/badge/python-3.6.8-brightgreen)](https://www.python.org/) 
 
-### scBERT as a Large-scale Pretrained Deep Language Model for Cell Type Annotation of Single-cell RNA-seq Data
+### scBERT: a Large-scale Pretrained Deep Langurage Model for Cell Type Annotation of Single-cell RNA-seq Data
 Reliable cell type annotation is a prerequisite for downstream analysis of single-cell RNA sequencing data. Existing annotation algorithms typically suffer from improper handling of batch effect, lack of curated marker gene lists, or difficulty in leveraging the latent gene-gene interaction information. Inspired by large scale pretrained langurage models, we present a pretrained deep neural network-based model scBERT (single-cell Bidirectional Encoder Representations from Transformers) to overcome the above challenges. scBERT follows the state-of-the-art paradigm of pre-train and fine-tune in the deep learning field. In the first phase of scBERT, it obtains a general understanding of gene-gene interaction by being pre-trained on huge amounts of unlabeled scRNA-seq data. The pre-trained scBERT can then be used for the cell annotation task of unseen and user-specific scRNA-seq data through supervised fine-tuning. For more information, please refer to [https://www.biorxiv.org/content/10.1101/2021.12.05.471261v1](https://www.biorxiv.org/content/10.1101/2021.12.05.471261v1)
 
 # Install
@@ -11,14 +11,14 @@ Reliable cell type annotation is a prerequisite for downstream analysis of singl
 
 # Data
 
-The data can be downloaded from these links. If you have any question, please contact fionafyang@tencent.com.
+The data can be downloaded from these links. The links are time-limited and you can send request for downloading. If you have any question, please contact fionafyang@tencent.com.
  
 https://drive.weixin.qq.com/s?k=AJEAIQdfAAozQt5B8k
 https://drive.google.com/file/d/1fNZbKx6LPeoS0hbVYJFI8jlDlNctZxlU/view?usp=sharing
 
 # Checkpoint 
 
-The pre-trained model checkpoint can be downloaded from this link. If you have any question, please contact fionafyang@tencent.com.
+The pre-trained model checkpoint can be downloaded from this link. The link is time-limited and you can send request for downloading. If you have any question, please contact fionafyang@tencent.com.
 
 https://drive.weixin.qq.com/s?k=AJEAIQdfAAoUxhXE7r
 
@@ -31,28 +31,17 @@ You can download this repo and run the demo task on your computing machine withi
 - Fine-tune using pre-trained models
 ```
 python -m torch.distributed.launch --data_path "fine-tune_data_path" --model_path "pretrained_model_path" finetune.py
-#The cell type information is stored in 'label' and 'label_dict' files.
 ```
-
 
 - Predict using fine-tuned models
 ```
 python --data_path "test_data_path" --model_path "finetuned_model_path" predict.py
-#The cell type information will be loaded frome 'label' and 'label_dict' files.
 ```
 
-
-- Detection of novel cell type
-
-The detection of novel cell type can be done by thresholding the predicted probabilities. (Default threshold=0.5)
+- Pre-train your own models
 ```
-python --data_path "test_data_path" --model_path "finetuned_model_path" --novel_type True --unassign_thres "custom_threshold" predict.py  
+python -m torch.distributed.launch --data_path "pre-train_data_path" pretrain.py
 ```
-
-- Expected output
-
-The expected output of model inference is the cell type of each individual cell.
-
 - Guidance for hyperparameter selection
 
 You can select the hyperparameters of the Performer encoder based on your data and task in:
@@ -71,12 +60,6 @@ dim           |Size of scBERT embedding vector        |	200     |	[100, 200]
 heads         |Number of attention heads of Performer |	10      |	[8, 10, 20] 
 depth         |Number of Performer encoder layers     |	6       |	[4, 6, 8] 
 
-
-# Time cost
-Typical install time on a "normal" desktop computer is about 30 minutes.
-
-Exptected run time for infering 10,000 cells on a "normal" desktop computer is about 25 minutes.
-
 # Disclaimer
 This tool is for research purpose and not approved for clinical use.
 
@@ -91,4 +74,5 @@ The copyright holder for this project is Tencent AI Lab.
 All rights reserved.
 
 # Citation
-Yang, F., Wang, W., Wang, F. et al. scBERT as a large-scale pretrained deep language model for cell type annotation of single-cell RNA-seq data. Nat Mach Intell (2022). https://doi.org/10.1038/s42256-022-00534-z
+Wang et al., scBERT: a Large-scale Pretrained Deep Langurage Model for Cell Type Annotation of Single-cell RNA-seq Data. [bioRxiv 2021.12.05.471261](https://doi.org/10.1101/2021.12.05.471261)
+

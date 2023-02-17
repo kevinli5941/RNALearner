@@ -1,0 +1,70 @@
+Total number of projects targeted:  10088
+Start:  0
+End:  10087
+Number of projects aggregated:  1
+Number of projects aggregated:  1000
+Number of projects aggregated:  2000
+Number of projects aggregated:  3000
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/http/client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/panfs/ccds02/nobackup/people/kli3/scBERT/data/recount3_preprocessing.py", line 41, in <module>
+    counts = pd.read_csv(file_link, skiprows = 2, sep="\t", header=0)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py", line 222, in _open_handles
+    self.handles = get_handle(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/common.py", line 609, in get_handle
+    ioargs = _get_filepath_or_buffer(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/common.py", line 312, in _get_filepath_or_buffer
+    with urlopen(req_info) as req:
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/pandas/io/common.py", line 212, in urlopen
+    return urllib.request.urlopen(*args, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36505515     36505515     fullrecou+    compute                                                                                                                                                                                                              32   05:58:48    RUNNING      0:0                  Unknown       Unknown       Unknown       400G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36505515.ba+ 36505515.ba+      batch                                                                                                                                                                                                               1         32   05:58:48    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,me+                                                                                                                                                                                                                                 
