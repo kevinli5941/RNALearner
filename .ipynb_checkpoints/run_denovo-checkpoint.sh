@@ -16,8 +16,8 @@ geneNum=15117
 modelName="denovo_from_27_lr10e4"
 modelPath="ckpts/recount3_mouse_15117_bulk_pretrain_continuation_1_bs_3_lr1e5_17.pth"
 binNum=7
-epoch=500
-batchSize=12
+epoch=50
+batchSize=2
 lr=1e-4
 
 numGPUs=1

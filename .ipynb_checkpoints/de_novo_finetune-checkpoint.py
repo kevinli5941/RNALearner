@@ -136,13 +136,18 @@ sss = StratifiedShuffleSplit(n_splits=1, train_size=2, test_size=10, random_stat
 for index_train, index_val in sss.split(data, label):
     data_train, label_train = data[index_train], label[index_train]
     data_val, label_val = data[index_val], label[index_val]
+    print("Train label: ", label_train, " Val label: ", label_val)
+    print("Train data: ", data_train, " Val data: ", data_val)
     train_dataset = SCDataset(data_train, label_train)
     val_dataset = SCDataset(data_val, label_val)
 
-train_sampler = DistributedSampler(train_dataset)
-val_sampler = DistributedSampler(val_dataset)
+train_sampler = DistributedSampler(train_dataset, shuffle = False)
+val_sampler = DistributedSampler(val_dataset, shuffle = False)
 train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, sampler=train_sampler)
 val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, sampler=val_sampler)
+
+# train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=False)
+# val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
 model = PerformerLM(
     num_tokens = CLASS,
@@ -221,7 +226,7 @@ for i in range(1, EPOCHS+1):
         with torch.no_grad():
             for index, (data_v, labels_v) in enumerate(val_loader):
                 index += 1
-                data_v, labels_v = data.to(device), labels.to(device)
+                data_v, labels_v = data_v.to(device), labels_v.to(device)
                 logits = model(data_v)
                 loss = loss_fn(logits, labels_v)
                 running_loss += loss.item()
@@ -235,6 +240,7 @@ for i in range(1, EPOCHS+1):
             # gather
             predictions = distributed_concat(torch.cat(predictions, dim=0), len(val_sampler.dataset), world_size)
             truths = distributed_concat(torch.cat(truths, dim=0), len(val_sampler.dataset), world_size)
+            
             no_drop = predictions != -1
             predictions = np.array((predictions[no_drop]).cpu())
             truths = np.array((truths[no_drop]).cpu())
@@ -242,8 +248,8 @@ for i in range(1, EPOCHS+1):
             f1 = f1_score(truths, predictions, average='macro')
             val_loss = running_loss / index
             val_loss = get_reduced(val_loss, local_rank, 0, world_size)
-            val_acc = 100 * cur_acc / index
-            val_acc = get_reduced(epoch_acc, local_rank, 0, world_size)
+            val_acc = 100 * cur_acc
+            val_acc = get_reduced(val_acc, local_rank, 0, world_size)
             if is_master:
                 print(f'    ==  Epoch: {i} | Validation Loss: {val_loss:.6f} | Accuracy: {val_acc:6.4f}%  ==')
                 print(confusion_matrix(truths, predictions))
