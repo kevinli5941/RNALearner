@@ -8,7 +8,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 projects = pd.read_csv("projects.csv")
 
 organism = 'mouse'
-# organism = human
+# organism = 'human'
 
 selected_projects = projects[projects['organism'] == organism]
 selected_projects = selected_projects.reset_index()

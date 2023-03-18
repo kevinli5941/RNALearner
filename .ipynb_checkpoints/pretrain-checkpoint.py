@@ -39,6 +39,7 @@ parser.add_argument("--mask_prob", type=float, default=0.15, help='Probability o
 parser.add_argument("--replace_prob", type=float, default=0.9, help='Probability of replacing with [MASK] token for masking.')
 parser.add_argument("--pos_embed", type=bool, default=True, help='Using Gene2vec encoding or not.')
 parser.add_argument("--data_path", type=str, default='./data/panglao_human.h5ad', help='Path of data for pretraining.')
+parser.add_argument("--model_path", type=str, default=None, help='Path of pretrained model.')
 parser.add_argument("--ckpt_dir", type=str, default='./ckpts/', help='Directory of checkpoint to save.')
 parser.add_argument("--model_name", type=str, default='panglao_pretrain', help='Pretrained model name.')
 
@@ -46,6 +47,9 @@ args = parser.parse_args()
 local_rank = args.local_rank
 rank = int(os.environ["RANK"])
 is_master = rank == 0
+
+print("Batch Size (per node): ", args.batch_size)
+print("Learning Rate: ", args.learning_rate)
 
 SEED = args.seed
 EPOCHS = args.epoch
@@ -69,6 +73,7 @@ ckpt_dir = args.ckpt_dir
 dist.init_process_group(backend='nccl')
 torch.cuda.set_device(local_rank)
 device = torch.device("cuda", local_rank)
+print("DEVICES: ", [torch.cuda.device(i) for i in range(torch.cuda.device_count())])
 world_size = torch.distributed.get_world_size()
 seed_all(SEED + torch.distributed.get_rank())
 
@@ -148,7 +153,7 @@ class SCDataset(Dataset):
 
 data = sc.read_h5ad(args.data_path)
 data = data.X
-data_train, data_val = train_test_split(data, test_size=0.05,random_state=SEED)
+data_train, data_val = train_test_split(data, test_size=0.05, random_state=SEED)
 
 train_dataset = SCDataset(data_train)
 val_dataset = SCDataset(data_val)
@@ -168,6 +173,11 @@ model = PerformerLM(
     local_attn_heads = 0,
     g2v_position_emb = POS_EMBED_USING
 )
+
+path = args.model_path
+if path:
+    ckpt = torch.load(path)
+    model.load_state_dict(ckpt['model_state_dict'])
 model.to(device)
 model = DDP(model, device_ids=[local_rank], output_device=local_rank)
 
