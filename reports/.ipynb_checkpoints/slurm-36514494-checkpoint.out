@@ -1,0 +1,131 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Batch Size (per node): Batch Size (per node):   33
+
+Learning Rate: Learning Rate:   0.00010.0001
+
+Batch Size (per node):  3
+Learning Rate:  0.0001
+Batch Size (per node):  3
+Learning Rate:  0.0001
+DEVICES:  [<torch.cuda.device object at 0x154fc3fe15b0>, <torch.cuda.device object at 0x154fc3fe1580>, <torch.cuda.device object at 0x154fc3fe1400>, <torch.cuda.device object at 0x154fc3fe15e0>]
+DEVICES:  [<torch.cuda.device object at 0x1470ec83e460>, <torch.cuda.device object at 0x1470ec83e4f0>, <torch.cuda.device object at 0x1470ec83e370>, <torch.cuda.device object at 0x1470ec83e550>]
+DEVICES:  [<torch.cuda.device object at 0x14bb4a68e460>, <torch.cuda.device object at 0x14bb4a68e4f0>, <torch.cuda.device object at 0x14bb4a68e370>, <torch.cuda.device object at 0x14bb4a68e550>]
+DEVICES:  [<torch.cuda.device object at 0x14cd695d3490>, <torch.cuda.device object at 0x14cd695d3520>, <torch.cuda.device object at 0x14cd695d33a0>, <torch.cuda.device object at 0x14cd695d3580>]
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+    ==  Epoch: 1 | Training Loss: 0.038226 | Accuracy: 2.7359%  ==
+    ==  Epoch: 1 | Validation Loss: 2.096544 | Accuracy: 6.9231%  ==
+    ==  Epoch: 2 | Training Loss: 0.018864 | Accuracy: 68.2339%  ==
+    ==  Epoch: 2 | Validation Loss: 0.947152 | Accuracy: 65.5629%  ==
+    ==  Epoch: 3 | Training Loss: 0.014925 | Accuracy: 72.0119%  ==
+    ==  Epoch: 3 | Validation Loss: 0.879090 | Accuracy: 73.2394%  ==
+    ==  Epoch: 4 | Training Loss: 0.014127 | Accuracy: 73.3213%  ==
+    ==  Epoch: 4 | Validation Loss: 0.837250 | Accuracy: 78.4946%  ==
+    ==  Epoch: 5 | Training Loss: 0.013726 | Accuracy: 73.9252%  ==
+    ==  Epoch: 5 | Validation Loss: 0.815740 | Accuracy: 75.2000%  ==
+    ==  Epoch: 6 | Training Loss: 0.013345 | Accuracy: 74.2315%  ==
+    ==  Epoch: 6 | Validation Loss: 0.789580 | Accuracy: 78.5714%  ==
+    ==  Epoch: 7 | Training Loss: 0.012956 | Accuracy: 74.5199%  ==
+    ==  Epoch: 7 | Validation Loss: 0.770812 | Accuracy: 80.4688%  ==
+    ==  Epoch: 8 | Training Loss: 0.012588 | Accuracy: 74.5634%  ==
+    ==  Epoch: 8 | Validation Loss: 0.746454 | Accuracy: 79.6610%  ==
+    ==  Epoch: 9 | Training Loss: 0.012288 | Accuracy: 74.4275%  ==
+    ==  Epoch: 9 | Validation Loss: 0.726338 | Accuracy: 74.8252%  ==
+    ==  Epoch: 10 | Training Loss: 0.011970 | Accuracy: 74.4766%  ==
+    ==  Epoch: 10 | Validation Loss: 0.711637 | Accuracy: 76.4228%  ==
+    ==  Epoch: 11 | Training Loss: 0.011705 | Accuracy: 74.4509%  ==
+    ==  Epoch: 11 | Validation Loss: 0.696354 | Accuracy: 75.0000%  ==
+    ==  Epoch: 12 | Training Loss: 0.011469 | Accuracy: 74.6081%  ==
+    ==  Epoch: 12 | Validation Loss: 0.684501 | Accuracy: 77.7143%  ==
+    ==  Epoch: 13 | Training Loss: 0.011302 | Accuracy: 74.9219%  ==
+    ==  Epoch: 13 | Validation Loss: 0.674070 | Accuracy: 78.3582%  ==
+    ==  Epoch: 14 | Training Loss: 0.011202 | Accuracy: 75.0082%  ==
+    ==  Epoch: 14 | Validation Loss: 0.676403 | Accuracy: 76.0563%  ==
+    ==  Epoch: 15 | Training Loss: 0.011144 | Accuracy: 75.0371%  ==
+    ==  Epoch: 15 | Validation Loss: 0.669595 | Accuracy: 80.7143%  ==
+    ==  Epoch: 16 | Training Loss: 0.011112 | Accuracy: 75.1274%  ==
+    ==  Epoch: 16 | Validation Loss: 0.667415 | Accuracy: 75.6098%  ==
+    ==  Epoch: 17 | Training Loss: 0.011046 | Accuracy: 75.1768%  ==
+    ==  Epoch: 17 | Validation Loss: 0.654372 | Accuracy: 76.3636%  ==
+    ==  Epoch: 18 | Training Loss: 0.011153 | Accuracy: 75.1119%  ==
+    ==  Epoch: 18 | Validation Loss: 0.654096 | Accuracy: 74.8428%  ==
+    ==  Epoch: 19 | Training Loss: 0.011517 | Accuracy: 74.6785%  ==
+    ==  Epoch: 19 | Validation Loss: 0.683728 | Accuracy: 73.3645%  ==
+    ==  Epoch: 20 | Training Loss: 0.011175 | Accuracy: 75.3422%  ==
+    ==  Epoch: 20 | Validation Loss: 0.642793 | Accuracy: 77.2727%  ==
+    ==  Epoch: 21 | Training Loss: 0.011052 | Accuracy: 75.1427%  ==
+    ==  Epoch: 21 | Validation Loss: 0.628274 | Accuracy: 80.9917%  ==
+    ==  Epoch: 22 | Training Loss: 0.013324 | Accuracy: 74.2499%  ==
+    ==  Epoch: 22 | Validation Loss: 0.834630 | Accuracy: 79.4118%  ==
+    ==  Epoch: 23 | Training Loss: 0.013005 | Accuracy: 74.7107%  ==
+    ==  Epoch: 23 | Validation Loss: 0.753225 | Accuracy: 74.8201%  ==
+    ==  Epoch: 24 | Training Loss: 0.012205 | Accuracy: 74.7007%  ==
+    ==  Epoch: 24 | Validation Loss: 0.714310 | Accuracy: 74.2647%  ==
+    ==  Epoch: 25 | Training Loss: 0.011475 | Accuracy: 74.8244%  ==
+    ==  Epoch: 25 | Validation Loss: 0.665231 | Accuracy: 74.8538%  ==
+    ==  Epoch: 26 | Training Loss: 0.010754 | Accuracy: 76.0858%  ==
+    ==  Epoch: 26 | Validation Loss: 0.618457 | Accuracy: 64.1304%  ==
+    ==  Epoch: 27 | Training Loss: 0.010151 | Accuracy: 77.0857%  ==
+    ==  Epoch: 27 | Validation Loss: 0.590689 | Accuracy: 79.7297%  ==
+    ==  Epoch: 28 | Training Loss: 0.009639 | Accuracy: 78.2448%  ==
+    ==  Epoch: 28 | Validation Loss: 0.563822 | Accuracy: 78.4615%  ==
+    ==  Epoch: 29 | Training Loss: 0.009324 | Accuracy: 79.0083%  ==
+    ==  Epoch: 29 | Validation Loss: 0.535838 | Accuracy: 79.3103%  ==
+    ==  Epoch: 30 | Training Loss: 0.008874 | Accuracy: 80.0762%  ==
+    ==  Epoch: 30 | Validation Loss: 0.534978 | Accuracy: 89.9160%  ==
+    ==  Epoch: 31 | Training Loss: 0.008963 | Accuracy: 80.0385%  ==
+    ==  Epoch: 31 | Validation Loss: 0.508949 | Accuracy: 82.1918%  ==
+    ==  Epoch: 32 | Training Loss: 0.008404 | Accuracy: 81.4110%  ==
+    ==  Epoch: 32 | Validation Loss: 0.486476 | Accuracy: 87.1429%  ==
+    ==  Epoch: 33 | Training Loss: 0.008087 | Accuracy: 82.3693%  ==
+    ==  Epoch: 33 | Validation Loss: 0.477885 | Accuracy: 81.2121%  ==
+    ==  Epoch: 34 | Training Loss: 0.007906 | Accuracy: 82.8919%  ==
+    ==  Epoch: 34 | Validation Loss: 0.467283 | Accuracy: 82.0513%  ==
+    ==  Epoch: 35 | Training Loss: 0.007717 | Accuracy: 83.3092%  ==
+    ==  Epoch: 35 | Validation Loss: 0.448726 | Accuracy: 80.7692%  ==
+    ==  Epoch: 36 | Training Loss: 0.007662 | Accuracy: 83.3495%  ==
+    ==  Epoch: 36 | Validation Loss: 0.445732 | Accuracy: 82.5000%  ==
+    ==  Epoch: 37 | Training Loss: 0.007569 | Accuracy: 83.5413%  ==
+    ==  Epoch: 37 | Validation Loss: 0.449351 | Accuracy: 74.0458%  ==
+    ==  Epoch: 38 | Training Loss: 0.007541 | Accuracy: 83.6280%  ==
+    ==  Epoch: 38 | Validation Loss: 0.443449 | Accuracy: 84.2105%  ==
+    ==  Epoch: 39 | Training Loss: 0.007514 | Accuracy: 83.6825%  ==
+    ==  Epoch: 39 | Validation Loss: 0.461885 | Accuracy: 78.9474%  ==
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36514494     36514494      rc3scout2    compute                                                                                                                                                                                                              32   08:02:59    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36514494.ba+ 36514494.ba+      batch                                                                                                                                                                                                               1         32   08:02:59    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

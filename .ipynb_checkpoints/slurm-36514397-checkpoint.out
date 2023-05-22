@@ -1,0 +1,57 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Batch Size (per node):  3
+Learning Rate:  0.0001
+Batch Size (per node): Batch Size (per node): Batch Size (per node):    333
+
+
+Learning Rate: Learning Rate: Learning Rate:    0.00010.00010.0001
+
+
+DEVICES:  [<torch.cuda.device object at 0x14d8f9db3550>, <torch.cuda.device object at 0x14d8f9db3520>, <torch.cuda.device object at 0x14d8f9db33a0>, <torch.cuda.device object at 0x14d8f9db3580>]
+DEVICES:  [<torch.cuda.device object at 0x1531cd770490>, <torch.cuda.device object at 0x1531cd770520>, <torch.cuda.device object at 0x1531cd7703a0>, <torch.cuda.device object at 0x1531cd770580>]
+DEVICES:  [<torch.cuda.device object at 0x14fe1c954430>, <torch.cuda.device object at 0x14fe1c9544c0>, <torch.cuda.device object at 0x14fe1c954340>, <torch.cuda.device object at 0x14fe1c954520>]
+DEVICES:  [<torch.cuda.device object at 0x150dc124e4c0>, <torch.cuda.device object at 0x150dc124e550>, <torch.cuda.device object at 0x150dc124e3d0>, <torch.cuda.device object at 0x150dc124e5b0>]
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+    ==  Epoch: 1 | Training Loss: 0.018870 | Accuracy:    nan%  ==
+    ==  Epoch: 1 | Validation Loss: 0.768366 | Accuracy: 79.4521%  ==
+    ==  Epoch: 2 | Training Loss: 0.011038 | Accuracy:    nan%  ==
+    ==  Epoch: 2 | Validation Loss: 0.642332 | Accuracy: 89.0411%  ==
+    ==  Epoch: 3 | Training Loss: 0.010378 | Accuracy:    nan%  ==
+    ==  Epoch: 3 | Validation Loss: 0.614581 | Accuracy: 84.1808%  ==
+    ==  Epoch: 4 | Training Loss: 0.010124 | Accuracy:    nan%  ==
+    ==  Epoch: 4 | Validation Loss: 0.593329 | Accuracy: 74.5455%  ==

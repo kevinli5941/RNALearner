@@ -26,7 +26,7 @@ import anndata as ad
 from utils import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--local_rank", type=int, default=-1, help='Local process rank.')
+parser.add_argument("--local-rank", type=int, default=-1, help='Local process rank.')
 parser.add_argument("--bin_num", type=int, default=5, help='Number of bins.')
 parser.add_argument("--gene_num", type=int, default=16906, help='Number of genes.')
 parser.add_argument("--epoch", type=int, default=100, help='Number of epochs.')
@@ -39,9 +39,11 @@ parser.add_argument("--mask_prob", type=float, default=0.15, help='Probability o
 parser.add_argument("--replace_prob", type=float, default=0.9, help='Probability of replacing with [MASK] token for masking.')
 parser.add_argument("--pos_embed", type=bool, default=True, help='Using Gene2vec encoding or not.')
 parser.add_argument("--data_path", type=str, default='./data/panglao_human.h5ad', help='Path of data for pretraining.')
+parser.add_argument("--patience", type=int, default=float('inf'), help='Number of consecutive epochs with increasing validation loss required for early stopping.')
 parser.add_argument("--model_path", type=str, default=None, help='Path of pretrained model.')
 parser.add_argument("--ckpt_dir", type=str, default='./ckpts/', help='Directory of checkpoint to save.')
 parser.add_argument("--model_name", type=str, default='panglao_pretrain', help='Pretrained model name.')
+
 
 args = parser.parse_args()
 local_rank = args.local_rank
@@ -66,11 +68,14 @@ MASK_TOKEN_ID = CLASS - 1
 PAD_TOKEN_ID = CLASS - 1
 MASK_IGNORE_TOKEN_IDS = [0]
 POS_EMBED_USING = args.pos_embed
+PATIENCE = int(args.patience)
+print("Patience: ", PATIENCE)
 
 model_name = args.model_name
+print("model: ", model_name)
 ckpt_dir = args.ckpt_dir
 
-dist.init_process_group(backend='nccl')
+dist.init_process_group(backend='nccl',timeout=datetime.timedelta(seconds=7200))
 torch.cuda.set_device(local_rank)
 device = torch.device("cuda", local_rank)
 print("DEVICES: ", [torch.cuda.device(i) for i in range(torch.cuda.device_count())])
@@ -153,7 +158,7 @@ class SCDataset(Dataset):
 
 data = sc.read_h5ad(args.data_path)
 data = data.X
-data_train, data_val = train_test_split(data, test_size=0.05, random_state=SEED)
+data_train, data_val = train_test_split(data, test_size=0.1, random_state=SEED)
 
 train_dataset = SCDataset(data_train)
 val_dataset = SCDataset(data_val)
@@ -197,6 +202,20 @@ loss_fn = nn.CrossEntropyLoss(ignore_index = PAD_TOKEN_ID, reduction='mean').to(
 softmax = nn.Softmax(dim=-1)
 
 dist.barrier()
+
+min_loss = float('inf')
+
+train_losses = []
+val_losses = []
+train_accs = []
+val_accs = []
+
+### Temporary guidance matrix of 1s ###
+guidance_mask = {}
+for name, param in model.named_parameters():
+    guidance_mask[name] = 1
+######
+
 for i in range(1, EPOCHS+1):
     train_loader.sampler.set_epoch(i)
     model.train()
@@ -216,6 +235,13 @@ for i in range(1, EPOCHS+1):
             logits = model(data)
             loss = loss_fn(logits.transpose(1, 2), labels) / GRADIENT_ACCUMULATION
             loss.backward()
+            
+            #GTL mask appliance
+            for name, param in model.named_parameters():
+                mask_val = guidance_mask[name]
+                if param.grad is not None:
+                    param.grad *= mask_val
+            
             torch.nn.utils.clip_grad_norm_(model.parameters(), int(1e2))
             optimizer.step()
             optimizer.zero_grad()
@@ -223,12 +249,17 @@ for i in range(1, EPOCHS+1):
         final = softmax(logits)[..., 1:-1]
         final = final.argmax(dim=-1) + 1
         pred_num = (labels != PAD_TOKEN_ID).sum(dim=-1)
+        #print("pred_num: ", pred_num)
         correct_num = ((labels != PAD_TOKEN_ID) * (final == labels)).sum(dim=-1)
+        #print("correct_num: ", correct_num)
         cum_acc += torch.true_divide(correct_num, pred_num).mean().item()
+        #print("true divide result: ", torch.true_divide(correct_num, pred_num))
     epoch_loss = running_loss / index
     epoch_acc = 100 * cum_acc / index
     epoch_loss = get_reduced(epoch_loss, local_rank, 0, world_size)
     epoch_acc = get_reduced(epoch_acc, local_rank, 0, world_size)
+    train_losses.append(epoch_loss)
+    train_accs.append(epoch_acc)
     if is_master:
         print(f'    ==  Epoch: {i} | Training Loss: {epoch_loss:.6f} | Accuracy: {epoch_acc:6.4f}%  ==')
     dist.barrier()
@@ -262,10 +293,38 @@ for i in range(1, EPOCHS+1):
             val_num = (truths != PAD_TOKEN_ID).sum(dim=-1)[0].item()
             val_loss = running_loss / index
             val_loss = get_reduced(val_loss, local_rank, 0, world_size)
-        if is_master:
             val_acc = 100 * correct_num / val_num
-            print(f'    ==  Epoch: {i} | Validation Loss: {val_loss:.6f} | Accuracy: {val_acc:6.4f}%  ==')
+            if is_master:
+                print(f'    ==  Epoch: {i} | Validation Loss: {val_loss:.6f} | Accuracy: {val_acc:6.4f}%  ==')
+            val_accs.append(val_acc)
+            val_losses.append(val_loss)
+            if val_loss < min_loss:
+                min_loss = val_loss
+                trigger_times = 0
+            else:
+                trigger_times += 1
+                if trigger_times > PATIENCE:
+                    break
     del predictions, truths
 
     if is_master:
         save_ckpt(i, model, optimizer, scheduler, epoch_loss, model_name, ckpt_dir)
+
+import matplotlib.pyplot as plt
+plt.figure(figsize=(10,5))
+plt.title("Training and Validation Accuracies")
+plt.plot(val_accs,label="val")
+plt.plot(train_accs,label="train")
+plt.xlabel("iterations")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.savefig("figures/" + args.model_name + "_acc")
+
+plt.figure(figsize=(10,5))
+plt.title("Training and Validation Loss")
+plt.plot(val_losses,label="val")
+plt.plot(train_losses,label="train")
+plt.xlabel("iterations")
+plt.ylabel("Loss")
+plt.legend()
+plt.savefig("figures/" + args.model_name + "_val") 

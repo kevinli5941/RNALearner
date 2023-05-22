@@ -1,0 +1,172 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Batch Size (per node):  3
+Learning Rate:  0.0001
+Batch Size (per node):  Batch Size (per node): Batch Size (per node): 3  
+33Learning Rate: 
+
+ Learning Rate: Learning Rate: 0.0001  
+0.00010.0001
+
+DEVICES:  [<torch.cuda.device object at 0x14691bb2df10>, <torch.cuda.device object at 0x14691bb2dee0>, <torch.cuda.device object at 0x14691bb2dd60>, <torch.cuda.device object at 0x14691bb2df40>]
+DEVICES:  [<torch.cuda.device object at 0x149f66e4bdc0>, <torch.cuda.device object at 0x149f66e4be50>, <torch.cuda.device object at 0x149f66e4bcd0>, <torch.cuda.device object at 0x149f66e4beb0>]
+DEVICES:  [<torch.cuda.device object at 0x148bb9c96dc0>, <torch.cuda.device object at 0x148bb9c96e50>, <torch.cuda.device object at 0x148bb9c96cd0>, <torch.cuda.device object at 0x148bb9c96eb0>]
+DEVICES:  [<torch.cuda.device object at 0x146161c7cdc0>, <torch.cuda.device object at 0x146161c7ce50>, <torch.cuda.device object at 0x146161c7ccd0>, <torch.cuda.device object at 0x146161c7ceb0>]
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+    ==  Epoch: 1 | Training Loss: 0.018870 | Accuracy:    nan%  ==
+    ==  Epoch: 1 | Validation Loss: 0.768366 | Accuracy: 79.4521%  ==
+    ==  Epoch: 2 | Training Loss: 0.011038 | Accuracy:    nan%  ==
+    ==  Epoch: 2 | Validation Loss: 0.642332 | Accuracy: 89.0411%  ==
+    ==  Epoch: 3 | Training Loss: 0.010378 | Accuracy:    nan%  ==
+    ==  Epoch: 3 | Validation Loss: 0.614581 | Accuracy: 84.1808%  ==
+    ==  Epoch: 4 | Training Loss: 0.010124 | Accuracy:    nan%  ==
+    ==  Epoch: 4 | Validation Loss: 0.593329 | Accuracy: 74.5455%  ==
+    ==  Epoch: 5 | Training Loss: 0.010021 | Accuracy:    nan%  ==
+    ==  Epoch: 5 | Validation Loss: 0.585035 | Accuracy: 71.1712%  ==
+    ==  Epoch: 6 | Training Loss: 0.009701 | Accuracy:    nan%  ==
+    ==  Epoch: 6 | Validation Loss: 0.586062 | Accuracy: 83.9041%  ==
+    ==  Epoch: 7 | Training Loss: 0.009236 | Accuracy: 79.3917%  ==
+    ==  Epoch: 7 | Validation Loss: 0.534685 | Accuracy: 24.2718%  ==
+    ==  Epoch: 8 | Training Loss: 0.008803 | Accuracy:    nan%  ==
+    ==  Epoch: 8 | Validation Loss: 0.517741 | Accuracy: 77.0677%  ==
+    ==  Epoch: 9 | Training Loss: 0.008490 | Accuracy:    nan%  ==
+    ==  Epoch: 9 | Validation Loss: 0.515318 | Accuracy: 86.7470%  ==
+    ==  Epoch: 10 | Training Loss: 0.008342 | Accuracy:    nan%  ==
+    ==  Epoch: 10 | Validation Loss: 0.492398 | Accuracy: 79.6610%  ==
+    ==  Epoch: 11 | Training Loss: 0.008192 | Accuracy: 80.6359%  ==
+    ==  Epoch: 11 | Validation Loss: 0.483973 | Accuracy: 78.8591%  ==
+    ==  Epoch: 12 | Training Loss: 0.008011 | Accuracy:    nan%  ==
+    ==  Epoch: 12 | Validation Loss: 0.477128 | Accuracy: 80.7531%  ==
+    ==  Epoch: 13 | Training Loss: 0.007964 | Accuracy: 81.1144%  ==
+    ==  Epoch: 13 | Validation Loss: 0.485115 | Accuracy: 91.6667%  ==
+    ==  Epoch: 14 | Training Loss: 0.007922 | Accuracy:    nan%  ==
+    ==  Epoch: 14 | Validation Loss: 0.476853 | Accuracy: 88.0150%  ==
+    ==  Epoch: 15 | Training Loss: 0.007917 | Accuracy:    nan%  ==
+    ==  Epoch: 15 | Validation Loss: 0.470069 | Accuracy: 84.0708%  ==
+    ==  Epoch: 16 | Training Loss: 0.007935 | Accuracy:    nan%  ==
+    ==  Epoch: 16 | Validation Loss: 0.472420 | Accuracy: 83.3333%  ==
+    ==  Epoch: 17 | Training Loss: 0.007858 | Accuracy:    nan%  ==
+    ==  Epoch: 17 | Validation Loss: 0.471090 | Accuracy: 89.7010%  ==
+    ==  Epoch: 18 | Training Loss: 0.007812 | Accuracy:    nan%  ==
+    ==  Epoch: 18 | Validation Loss: 0.462058 | Accuracy: 76.2376%  ==
+    ==  Epoch: 19 | Training Loss: 0.007760 | Accuracy:    nan%  ==
+    ==  Epoch: 19 | Validation Loss: 0.459359 | Accuracy: 78.0000%  ==
+    ==  Epoch: 20 | Training Loss: 0.008389 | Accuracy:    nan%  ==
+    ==  Epoch: 20 | Validation Loss: 0.453896 | Accuracy: 75.3906%  ==
+    ==  Epoch: 21 | Training Loss: 0.007775 | Accuracy:    nan%  ==
+    ==  Epoch: 21 | Validation Loss: 0.505841 | Accuracy: 84.0125%  ==
+    ==  Epoch: 22 | Training Loss: 0.007513 | Accuracy:    nan%  ==
+    ==  Epoch: 22 | Validation Loss: 0.445199 | Accuracy: 79.5699%  ==
+    ==  Epoch: 23 | Training Loss: 0.007353 | Accuracy:    nan%  ==
+    ==  Epoch: 23 | Validation Loss: 0.437586 | Accuracy: 81.3333%  ==
+    ==  Epoch: 24 | Training Loss: 0.007281 | Accuracy:    nan%  ==
+    ==  Epoch: 24 | Validation Loss: 0.433825 | Accuracy: 90.4762%  ==
+    ==  Epoch: 25 | Training Loss: 0.007164 | Accuracy:    nan%  ==
+    ==  Epoch: 25 | Validation Loss: 0.422560 | Accuracy: 88.1579%  ==
+    ==  Epoch: 26 | Training Loss: 0.007085 | Accuracy: 82.6329%  ==
+    ==  Epoch: 26 | Validation Loss: 0.425068 | Accuracy: 84.4000%  ==
+    ==  Epoch: 27 | Training Loss: 0.006987 | Accuracy:    nan%  ==
+    ==  Epoch: 27 | Validation Loss: 0.419970 | Accuracy: 79.0323%  ==
+    ==  Epoch: 28 | Training Loss: 0.006932 | Accuracy:    nan%  ==
+    ==  Epoch: 28 | Validation Loss: 0.413448 | Accuracy: 86.4238%  ==
+    ==  Epoch: 29 | Training Loss: 0.006892 | Accuracy:    nan%  ==
+    ==  Epoch: 29 | Validation Loss: 0.408218 | Accuracy: 81.5331%  ==
+    ==  Epoch: 30 | Training Loss: 0.006839 | Accuracy:    nan%  ==
+    ==  Epoch: 30 | Validation Loss: 0.416952 | Accuracy: 81.0945%  ==
+    ==  Epoch: 31 | Training Loss: 0.006771 | Accuracy:    nan%  ==
+    ==  Epoch: 31 | Validation Loss: 0.409567 | Accuracy: 89.5270%  ==
+    ==  Epoch: 32 | Training Loss: 0.006716 | Accuracy: 83.3041%  ==
+    ==  Epoch: 32 | Validation Loss: 0.402608 | Accuracy: 84.7134%  ==
+    ==  Epoch: 33 | Training Loss: 0.006715 | Accuracy:    nan%  ==
+    ==  Epoch: 33 | Validation Loss: 0.398151 | Accuracy: 78.5124%  ==
+    ==  Epoch: 34 | Training Loss: 0.006675 | Accuracy:    nan%  ==
+    ==  Epoch: 34 | Validation Loss: 0.404030 | Accuracy: 81.7647%  ==
+slurmstepd: error: *** JOB 36514396 ON gpu010 CANCELLED AT 2023-04-04T04:26:08 ***
+WARNING:torch.distributed.elastic.agent.server.api:Received 15 death signal, shutting down workers
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950983 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950984 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950985 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950986 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950983 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950984 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950985 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 950986 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 723, in run
+    result = self._invoke_run(role)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 950977 got signal: 15
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 241, in launch_agent
+    result = agent.run()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/metrics/api.py", line 129, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 730, in run
+    self._shutdown(e.sigval)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/local_elastic_agent.py", line 289, in _shutdown
+    self._pcontext.close(death_sig)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 331, in close
+    self._close(death_sig=death_sig, timeout=timeout)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 708, in _close
+    handler.proc.wait(time_to_wait)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/subprocess.py", line 1911, in _wait
+    time.sleep(delay)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 950977 got signal: 15

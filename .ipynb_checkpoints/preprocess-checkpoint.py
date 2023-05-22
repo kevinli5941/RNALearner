@@ -7,7 +7,8 @@ from scipy import sparse
 
 ### [OPTION TWO] ###
 panglao = sc.read_h5ad('./data/recount3/preprocessed_mouse_gene2vec_15117_compatible_bulk_only.h5ad')
-data = sc.read_h5ad('./data/osd105/osd105_raw_ensembl_all_genes.h5ad')
+#data = sc.read_h5ad('./data/osd105/osd105_raw_ensembl_all_genes.h5ad')
+data = sc.read_h5ad('./data/osd99/osd99_raw_ensembl_all_genes.h5ad')
 counts = sparse.lil_matrix((data.X.shape[0],panglao.X.shape[1]),dtype=np.float32)
 ref = panglao.var_names.tolist()
 obj = data.var_names.tolist()
@@ -53,4 +54,4 @@ sc.pp.log1p(new, base=2)
 with open('reports/preprocessing_progress.txt', 'a') as f:
     f.write('\nbegin writing result')
 
-new.write('./data/osd105/osd105_preprocessed_ensembl_15117.h5ad')
+new.write('./data/osd99/osd99_preprocessed_ensembl_15117.h5ad')

@@ -1,0 +1,183 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+(7580, 15117)
+(1896, 15117)
+(7580, 15117)
+(1896, 15117)
+(7580, 15117)
+(1896, 15117)
+(7580, 15117)
+(1896, 15117)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+begin trainingbegin trainingbegin trainingbegin training
+
+
+
+    ==  Epoch: 1 | Training Loss: 0.716017 | Accuracy: 31.1511%  ==
+    ==  Epoch: 1 | Validation Loss: 0.714734 | Accuracy: 31.1709%  ==
+[[   0 1305]
+ [   0  591]]
+    ==  Epoch: 2 | Training Loss: 0.664863 | Accuracy: 57.9641%  ==
+    ==  Epoch: 2 | Validation Loss: 0.569520 | Accuracy: 97.1519%  ==
+[[1290   15]
+ [  39  552]]
+    ==  Epoch: 3 | Training Loss: 0.267817 | Accuracy: 96.5717%  ==
+    ==  Epoch: 3 | Validation Loss: 0.047530 | Accuracy: 98.9451%  ==
+[[1296    9]
+ [  11  580]]
+    ==  Epoch: 4 | Training Loss: 0.029222 | Accuracy: 98.9847%  ==
+    ==  Epoch: 4 | Validation Loss: 0.020984 | Accuracy: 98.8924%  ==
+[[1297    8]
+ [  13  578]]
+    ==  Epoch: 5 | Training Loss: 0.013210 | Accuracy: 99.4462%  ==
+    ==  Epoch: 5 | Validation Loss: 0.012070 | Accuracy: 99.5781%  ==
+[[1298    7]
+ [   1  590]]
+    ==  Epoch: 6 | Training Loss: 0.006548 | Accuracy: 99.8022%  ==
+    ==  Epoch: 6 | Validation Loss: 0.008532 | Accuracy: 99.6835%  ==
+[[1300    5]
+ [   1  590]]
+    ==  Epoch: 7 | Training Loss: 0.003737 | Accuracy: 99.8945%  ==
+    ==  Epoch: 7 | Validation Loss: 0.006116 | Accuracy: 99.7363%  ==
+[[1303    2]
+ [   3  588]]
+    ==  Epoch: 8 | Training Loss: 0.004466 | Accuracy: 99.8022%  ==
+    ==  Epoch: 8 | Validation Loss: 0.008855 | Accuracy: 99.7363%  ==
+[[1300    5]
+ [   0  591]]
+    ==  Epoch: 9 | Training Loss: 0.002147 | Accuracy: 99.9473%  ==
+    ==  Epoch: 9 | Validation Loss: 0.006834 | Accuracy: 99.7363%  ==
+[[1303    2]
+ [   3  588]]
+    ==  Epoch: 10 | Training Loss: 0.001520 | Accuracy: 100.0000%  ==
+    ==  Epoch: 10 | Validation Loss: 0.007835 | Accuracy: 99.7363%  ==
+[[1301    4]
+ [   1  590]]
+    ==  Epoch: 11 | Training Loss: 0.001383 | Accuracy: 99.9604%  ==
+    ==  Epoch: 11 | Validation Loss: 0.008557 | Accuracy: 99.7363%  ==
+[[1300    5]
+ [   0  591]]
+    ==  Epoch: 12 | Training Loss: 0.001044 | Accuracy: 99.9736%  ==
+    ==  Epoch: 12 | Validation Loss: 0.007306 | Accuracy: 99.6835%  ==
+[[1303    2]
+ [   4  587]]
+    ==  Epoch: 13 | Training Loss: 0.000725 | Accuracy: 100.0000%  ==
+    ==  Epoch: 13 | Validation Loss: 0.006828 | Accuracy: 99.6835%  ==
+[[1301    4]
+ [   2  589]]
+    ==  Epoch: 14 | Training Loss: 0.000677 | Accuracy: 100.0000%  ==
+    ==  Epoch: 14 | Validation Loss: 0.006600 | Accuracy: 99.6835%  ==
+[[1302    3]
+ [   3  588]]
+    ==  Epoch: 15 | Training Loss: 0.000667 | Accuracy: 100.0000%  ==
+    ==  Epoch: 15 | Validation Loss: 0.006551 | Accuracy: 99.6835%  ==
+[[1302    3]
+ [   3  588]]
+    ==  Epoch: 16 | Training Loss: 0.000724 | Accuracy: 100.0000%  ==
+    ==  Epoch: 16 | Validation Loss: 0.006858 | Accuracy: 99.6308%  ==
+[[1302    3]
+ [   4  587]]
+    ==  Epoch: 17 | Training Loss: 0.000829 | Accuracy: 99.9868%  ==
+    ==  Epoch: 17 | Validation Loss: 0.006959 | Accuracy: 99.7890%  ==
+[[1301    4]
+ [   0  591]]
+[E ProcessGroupNCCL.cpp:828] [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=843, OpType=ALLREDUCE, Timeout(ms)=1800000) ran for 1800491 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:828] [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=843, OpType=ALLREDUCE, Timeout(ms)=1800000) ran for 1800495 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:828] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=843, OpType=ALLREDUCE, Timeout(ms)=1800000) ran for 1800497 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:455] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:460] To avoid data inconsistency, we are taking the entire process down.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=843, OpType=ALLREDUCE, Timeout(ms)=1800000) ran for 1800491 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:455] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:460] To avoid data inconsistency, we are taking the entire process down.
+terminate called after throwing an instance of 'std::runtime_error'
+[E ProcessGroupNCCL.cpp:455] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+  what():  [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=843, OpType=ALLREDUCE, Timeout(ms)=1800000) ran for 1800497 milliseconds before timing out.[E ProcessGroupNCCL.cpp:460] To avoid data inconsistency, we are taking the entire process down.
+
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=843, OpType=ALLREDUCE, Timeout(ms)=1800000) ran for 1800495 milliseconds before timing out.
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: -6) local_rank: 0 (pid: 318093) of binary: /home/kli3/.conda/envs/scbert/bin/python3
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+=======================================================
+scout.py FAILED
+-------------------------------------------------------
+Failures:
+[1]:
+  time      : 2023-04-22_16:11:45
+  host      : gpu012.atstor.adapt.nccs.nasa.gov
+  rank      : 1 (local_rank: 1)
+  exitcode  : -6 (pid: 318094)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 318094
+[2]:
+  time      : 2023-04-22_16:11:45
+  host      : gpu012.atstor.adapt.nccs.nasa.gov
+  rank      : 3 (local_rank: 3)
+  exitcode  : -6 (pid: 318096)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 318096
+-------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-04-22_16:11:45
+  host      : gpu012.atstor.adapt.nccs.nasa.gov
+  rank      : 0 (local_rank: 0)
+  exitcode  : -6 (pid: 318093)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 318093
+=======================================================
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36516235     36516235          scout    compute                                                                                                                                                                                                              32   01:39:38    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36516235.ba+ 36516235.ba+      batch                                                                                                                                                                                                               1         32   01:39:38    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

@@ -1,0 +1,106 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Batch Size (per node):  3
+Learning Rate:  0.0001
+Batch Size (per node): Batch Size (per node): Batch Size (per node):    333
+
+
+Learning Rate: Learning Rate: Learning Rate:    0.00010.00010.0001
+
+
+DEVICES:  [<torch.cuda.device object at 0x14d8f9db3550>, <torch.cuda.device object at 0x14d8f9db3520>, <torch.cuda.device object at 0x14d8f9db33a0>, <torch.cuda.device object at 0x14d8f9db3580>]
+DEVICES:  [<torch.cuda.device object at 0x1531cd770490>, <torch.cuda.device object at 0x1531cd770520>, <torch.cuda.device object at 0x1531cd7703a0>, <torch.cuda.device object at 0x1531cd770580>]
+DEVICES:  [<torch.cuda.device object at 0x14fe1c954430>, <torch.cuda.device object at 0x14fe1c9544c0>, <torch.cuda.device object at 0x14fe1c954340>, <torch.cuda.device object at 0x14fe1c954520>]
+DEVICES:  [<torch.cuda.device object at 0x150dc124e4c0>, <torch.cuda.device object at 0x150dc124e550>, <torch.cuda.device object at 0x150dc124e3d0>, <torch.cuda.device object at 0x150dc124e5b0>]
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+    ==  Epoch: 1 | Training Loss: 0.018870 | Accuracy:    nan%  ==
+    ==  Epoch: 1 | Validation Loss: 0.768366 | Accuracy: 79.4521%  ==
+    ==  Epoch: 2 | Training Loss: 0.011038 | Accuracy:    nan%  ==
+    ==  Epoch: 2 | Validation Loss: 0.642332 | Accuracy: 89.0411%  ==
+    ==  Epoch: 3 | Training Loss: 0.010378 | Accuracy:    nan%  ==
+    ==  Epoch: 3 | Validation Loss: 0.614581 | Accuracy: 84.1808%  ==
+    ==  Epoch: 4 | Training Loss: 0.010124 | Accuracy:    nan%  ==
+    ==  Epoch: 4 | Validation Loss: 0.593329 | Accuracy: 74.5455%  ==
+    ==  Epoch: 5 | Training Loss: 0.010021 | Accuracy:    nan%  ==
+    ==  Epoch: 5 | Validation Loss: 0.585035 | Accuracy: 71.1712%  ==
+    ==  Epoch: 6 | Training Loss: 0.009701 | Accuracy:    nan%  ==
+    ==  Epoch: 6 | Validation Loss: 0.586062 | Accuracy: 83.9041%  ==
+Traceback (most recent call last):
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/pretrain.py", line 301, in <module>
+    if trigger_times > PATIENCE:
+TypeError: '>' not supported between instances of 'int' and 'str'
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 931807 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 931808 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 931809 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 931806) of binary: /home/kli3/.conda/envs/scbert/bin/python3
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-03-31_20:01:43
+  host      : gpu012.atstor.adapt.nccs.nasa.gov
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 931806)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36514397     36514397     rc3pretra+    compute                                                                                                                                                                                                              32   17:12:29    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36514397.ba+ 36514397.ba+      batch                                                                                                                                                                                                               1         32   17:12:29    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

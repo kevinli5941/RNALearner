@@ -1,0 +1,121 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/anndata/_core/anndata.py:1785: FutureWarning: X.dtype being converted to np.float32 from float64. In the next version of anndata (0.9) conversion will not be automatic. Pass dtype explicitly to avoid this warning. Pass `AnnData(X, dtype=X.dtype, ...)` to get the future behavour.
+  [AnnData(sparse.csr_matrix(a.shape), obs=a.obs) for a in all_adatas],
+(12, 15117)
+(12, 15117)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+yes path!
+begin training
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([0, 0])
+1 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([0, 0])
+2 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([0, 0])
+3 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 1])
+4 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 1])
+5 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 1])
+mask_vak:  tensor([0.8575, 0.5929, 0.9716, 0.5274, 0.2603, 0.3645, 1.0000, 0.7693, 0.5561,
+        0.7444, 0.6464, 0.3248, 0.5519, 0.5475, 0.3525, 0.8375, 0.3798, 0.5084,
+        0.3590, 0.6918, 0.7014, 0.5005, 0.4866, 0.4502, 0.3564, 0.6413, 0.3350,
+        0.7131, 0.5398, 0.6395, 0.6633, 0.3542, 0.7688, 0.5977, 0.5038, 0.6832,
+        0.2813, 0.5809, 0.5148, 0.7630, 0.3076, 0.8422, 0.1076, 0.6069, 0.4488,
+        0.2926, 0.5764, 0.4399, 0.5758, 0.5702, 0.1293, 0.7000, 0.4726, 0.6460,
+        0.7901, 0.7838, 0.6316, 0.5585, 0.6761, 0.7563, 0.2480, 0.8038, 0.3519,
+        0.5843, 0.6603, 0.5633, 0.6588, 0.7766, 0.3583, 0.5731, 0.1211, 0.1411,
+        0.1881, 0.4436, 0.3374, 0.5455, 0.2347, 0.2991, 0.6651, 0.1620, 0.3041,
+        0.7175, 0.5768, 0.0937, 0.6702, 0.5901, 0.3815, 0.2664, 0.3715, 0.2345,
+        0.6619, 0.5943, 0.8468, 0.5688, 0.4593, 0.7456, 0.2595, 0.4871, 0.0647,
+        0.7687, 0.6902, 0.6590, 0.1516, 0.5916, 0.5459, 0.1791, 0.7923, 0.4417,
+        0.6365, 0.1762, 0.0790, 0.2638, 0.7926, 0.7770, 0.5697, 0.4458, 0.5626,
+        0.7298, 0.7503, 0.5993, 0.6063, 0.5101, 0.5037, 0.7992, 0.5631, 0.5782,
+        0.5744, 0.7886, 0.7582, 0.5555, 0.6585, 0.6762, 0.3595, 0.1731, 0.7458,
+        0.0388, 0.8823, 0.5647, 0.4653, 0.4172, 0.0644, 0.8477, 0.9127, 0.5092,
+        0.7687, 0.3729, 0.7140, 0.6346, 0.4270, 0.8033, 0.2764, 0.6672, 0.2763,
+        0.6682, 0.6934, 0.2363, 0.5880, 0.6871, 0.3464, 0.4413, 0.2536, 0.4858,
+        0.4987, 0.4371, 0.5759, 0.6393, 0.5577, 0.5523, 0.6923, 0.1856, 0.5308,
+        0.5831, 0.6435, 0.7219, 0.6896, 0.4033, 0.2797, 0.5751, 0.4795, 0.5144,
+        0.1815, 0.6462, 0.0000, 0.6255, 0.6881, 0.5791, 0.4062, 0.4607, 0.5849,
+        0.2056, 0.6647, 0.6707, 0.6975, 0.6837, 0.5271, 0.7859, 0.4080, 0.6308,
+        0.5612, 0.6472], device='cuda:0')
+mask_vak:  tensor([0.8650, 0.6632, 0.6538, 0.4678, 0.2046, 0.5892, 0.0000, 0.7869, 0.6560,
+        0.6663, 0.7195, 0.5295, 0.7056, 0.7187, 0.8301, 0.3905, 0.6473, 0.7200,
+        0.5483, 0.7807, 0.8129, 0.7660, 0.7275, 0.5659, 0.6739, 0.6934, 0.3627,
+        0.7577, 0.6994, 0.8969, 0.7548, 0.5982, 0.8125, 0.7381, 0.6033, 0.5187,
+        0.6136, 0.7716, 0.5749, 0.7932, 0.6728, 0.7363, 0.2738, 0.7663, 0.6602,
+        0.6111, 0.6664, 0.4143, 0.7031, 0.3785, 0.1030, 0.6768, 0.5833, 0.7522,
+        0.7755, 0.8711, 0.7208, 0.6783, 0.8206, 0.7403, 0.2631, 0.9674, 0.1516,
+        0.6945, 0.7873, 0.5902, 0.6342, 0.9078, 0.5783, 0.7686, 0.1473, 0.0307,
+        0.5279, 0.8749, 0.4065, 0.6748, 0.6296, 0.4088, 1.0000, 0.1270, 0.7970,
+        0.8755, 0.3619, 0.4053, 0.8125, 0.6808, 0.5357, 0.5359, 0.6089, 0.8382,
+        0.4523, 0.7226, 0.9909, 0.6761, 0.5311, 0.9413, 0.3763, 0.5779, 0.4579,
+        0.7490, 0.7495, 0.7971, 0.6528, 0.7495, 0.6489, 0.1075, 0.8198, 0.7288,
+        0.7441, 0.0840, 0.2175, 0.2842, 0.9120, 0.8908, 0.7137, 0.7182, 0.5024,
+        0.8890, 0.8977, 0.7455, 0.7058, 0.6298, 0.5158, 0.7245, 0.5846, 0.8267,
+        0.6780, 0.8742, 0.9410, 0.6903, 0.7851, 0.4734, 0.6134, 0.4417, 0.7211,
+        0.0223, 0.8453, 0.7257, 0.6595, 0.7724, 0.2465, 0.7407, 0.6795, 0.6664,
+        0.5070, 0.5668, 0.6749, 0.6813, 0.7423, 0.9267, 0.6159, 0.8434, 0.4515,
+        0.4425, 0.7036, 0.2209, 0.7262, 0.8174, 0.4924, 0.7475, 0.7923, 0.0196,
+        0.4963, 0.5023, 0.6921, 0.7308, 0.6701, 0.6585, 0.7159, 0.1421, 0.7139,
+        0.7681, 0.7143, 0.7514, 0.8217, 0.7561, 0.3099, 0.8399, 0.6324, 0.6612,
+        0.6107, 0.6552, 0.0452, 0.7707, 0.8909, 0.6727, 0.0907, 0.7098, 0.7503,
+        0.0386, 0.7664, 0.7930, 0.8354, 0.8466, 0.6070, 0.5859, 0.3512, 0.5233,
+        0.6787, 0.5519], device='cuda:0')
+Traceback (most recent call last):
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/new_finetune.py", line 273, in <module>
+    if sum(mask_val) > 0:
+RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 2313267) of binary: /home/kli3/.conda/envs/scbert/bin/python3
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+new_finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-04-13_05:11:42
+  host      : gpu011.atstor.adapt.nccs.nasa.gov
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2313267)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36515449     36515449     scbertpre+    compute                                                                                                                                                                                                              32   00:00:14    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36515449.ba+ 36515449.ba+      batch                                                                                                                                                                                                               1         32   00:00:14    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

@@ -1,0 +1,3025 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+Test: [6 2] [ 1  3  4  0  8  5  7  9 10 11]
+Train label:  tensor([1, 0])  Val label:  tensor([0, 0, 0, 0, 1, 0, 1, 1, 1, 1])
+(2, 15117)
+(10, 15117)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+yes path!
+begin training
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 1 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 1 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 2 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 2 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 3 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 3 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 4 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 4 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 5 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 5 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 6 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 6 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 7 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 7 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 8 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 8 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 9 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 9 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 10 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 10 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 11 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 11 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 12 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 12 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 13 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 13 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 14 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 14 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 15 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 15 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 16 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 16 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 17 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 17 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 18 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 18 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 19 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 19 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 20 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 20 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 21 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 21 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 22 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 22 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 23 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 23 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 24 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 24 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 25 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 25 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 26 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 26 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 27 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 27 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 28 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 28 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 29 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 29 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 30 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 30 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 31 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 31 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 32 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 32 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 33 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 33 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 34 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 34 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 35 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 35 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 36 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 36 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 37 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 37 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 38 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 38 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 39 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 39 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 40 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 40 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 41 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 41 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 42 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 42 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 43 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 43 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 44 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 44 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 45 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 45 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 46 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 46 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 47 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 47 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 48 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 48 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 49 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 49 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 50 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 50 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 51 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 51 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 52 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 52 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 53 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 53 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 54 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 54 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 55 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 55 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 56 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 56 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 57 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 57 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 58 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 58 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 59 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 59 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 60 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 60 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 61 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 61 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 62 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 62 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 63 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 63 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 64 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 64 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 65 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 65 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 66 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 66 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 67 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 67 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 68 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 68 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 69 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 69 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 70 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 70 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 71 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 71 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 72 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 72 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 73 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 73 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 74 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 74 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 75 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 75 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 76 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 76 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 77 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 77 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 78 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 78 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 79 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 79 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 80 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 80 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 81 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 81 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 82 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 82 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 83 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 83 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 84 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 84 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 85 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 85 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 86 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 86 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 87 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 87 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 88 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 88 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 89 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 89 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 90 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 90 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 91 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 91 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 92 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 92 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 93 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 93 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 94 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 94 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 95 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 95 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 96 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 96 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 97 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 97 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 98 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 98 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 99 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 99 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 100 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 100 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 101 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 101 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 102 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 102 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 103 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 103 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 104 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 104 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 105 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 105 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 106 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 106 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 107 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 107 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 108 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 108 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 109 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 109 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 110 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 110 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 111 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 111 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 112 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 112 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 113 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 113 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 114 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 114 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 115 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 115 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 116 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 116 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 117 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 117 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 118 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 118 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 119 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 119 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 120 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 120 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 121 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 121 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 122 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 122 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 123 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 123 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 124 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 124 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 125 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 125 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 126 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 126 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 127 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 127 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 128 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 128 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 129 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 129 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 130 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 130 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 131 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 131 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 132 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 132 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 133 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 133 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 134 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 134 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 135 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 135 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 136 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 136 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 137 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 137 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 138 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 138 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 139 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 139 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 140 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 140 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 141 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 141 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 142 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 142 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 143 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 143 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 144 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 144 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 145 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 145 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 146 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 146 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 147 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 147 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 148 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 148 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 149 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 149 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 150 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 150 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 151 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 151 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 152 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 152 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 153 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 153 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 154 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 154 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 155 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 155 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 156 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 156 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 157 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 157 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 158 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 158 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 159 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 159 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 160 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 160 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 161 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 161 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 162 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 162 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 163 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 163 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 164 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 164 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 165 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 165 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 166 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 166 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 167 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 167 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 168 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 168 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 169 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 169 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 170 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 170 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 171 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 171 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 172 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 172 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 173 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 173 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 174 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 174 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 175 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 175 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 176 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 176 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 177 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 177 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 178 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 178 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 179 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 179 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 180 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 180 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 181 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 181 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 182 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 182 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 183 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 183 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 184 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 184 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 185 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 185 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 186 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 186 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 187 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 187 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 188 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 188 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 189 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 189 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 190 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 190 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 191 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 191 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 192 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 192 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 193 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 193 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 194 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 194 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 195 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 195 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 196 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 196 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 197 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 197 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 198 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 198 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 199 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 199 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 200 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 200 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 201 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 201 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 202 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 202 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 203 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 203 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 204 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 204 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 205 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 205 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 206 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 206 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 207 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 207 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 208 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 208 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 209 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 209 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 210 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 210 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 211 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 211 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 212 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 212 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 213 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 213 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 214 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 214 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 215 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 215 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 216 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 216 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 217 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 217 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 218 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 218 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 219 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 219 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 220 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 220 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 221 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 221 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 222 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 222 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 223 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 223 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 224 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 224 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 225 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 225 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 226 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 226 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 227 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 227 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 228 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 228 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 229 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 229 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 230 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 230 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 231 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 231 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 232 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 232 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 233 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 233 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 234 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 234 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 235 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 235 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 236 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 236 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 237 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 237 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 238 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 238 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 239 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 239 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 240 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 240 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 241 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 241 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 242 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 242 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 243 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 243 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 244 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 244 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 245 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 245 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 246 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 246 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 247 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 247 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 248 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 248 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 249 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 249 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 250 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 250 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 251 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 251 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 252 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 252 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 253 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 253 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 254 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 254 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 255 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 255 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 256 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 256 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 257 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 257 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 258 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 258 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 259 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 259 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 260 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 260 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 261 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 261 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 262 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 262 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 263 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 263 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 264 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 264 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 265 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 265 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 266 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 266 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 267 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 267 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 268 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 268 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 269 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 269 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 270 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 270 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 271 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 271 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 272 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 272 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 273 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 273 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 274 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 274 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 275 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 275 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 276 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 276 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 277 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 277 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 278 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 278 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 279 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 279 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 280 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 280 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 281 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 281 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 282 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 282 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 283 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 283 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 284 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 284 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 285 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 285 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 286 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 286 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 287 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 287 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 288 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 288 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 289 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 289 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 290 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 290 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 291 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 291 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 292 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 292 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 293 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 293 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 294 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 294 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 295 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 295 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 296 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 296 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 297 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 297 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 298 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 298 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 299 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 299 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 300 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 300 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 301 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 301 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 302 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 302 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 303 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 303 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 304 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 304 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 305 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 305 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 306 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 306 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 307 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 307 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 308 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 308 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 309 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 309 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 310 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 310 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 311 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 311 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 312 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 312 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 313 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 313 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 314 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 314 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 315 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 315 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 316 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 316 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 317 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 317 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 318 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 318 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 319 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 319 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 320 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 320 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 321 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 321 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 322 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 322 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 323 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 323 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 324 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 324 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 325 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 325 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 326 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 326 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 327 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 327 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 328 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 328 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 329 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 329 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 330 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 330 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 331 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 331 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 332 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 332 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 333 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 333 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 334 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 334 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 335 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 335 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 336 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 336 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 337 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 337 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 338 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 338 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 339 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 339 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 340 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 340 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 341 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 341 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 342 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 342 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 343 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 343 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 344 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 344 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 345 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 345 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 346 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 346 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 347 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 347 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 348 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 348 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 349 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 349 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 350 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 350 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 351 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 351 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 352 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 352 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 353 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 353 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 354 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 354 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 355 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 355 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 356 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 356 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 357 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 357 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 358 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 358 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 359 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 359 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 360 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 360 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 361 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 361 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 362 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 362 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 363 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 363 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 364 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 364 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 365 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 365 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 366 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 366 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 367 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 367 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 368 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 368 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 369 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 369 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 370 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 370 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 371 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 371 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 372 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 372 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 373 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 373 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 374 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 374 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 375 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 375 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 376 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 376 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 377 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 377 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 378 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 378 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 379 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 379 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 380 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 380 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 381 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 381 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 382 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 382 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 383 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 383 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 384 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 384 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 385 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 385 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 386 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 386 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 387 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 387 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 388 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 388 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 389 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 389 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 390 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 390 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 391 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 391 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 392 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 392 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 393 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 393 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 394 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 394 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 395 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 395 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 396 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 396 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 397 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 397 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 398 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 398 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 399 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 399 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 400 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 400 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 401 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 401 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 402 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 402 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 403 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 403 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 404 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 404 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 405 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 405 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 406 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 406 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 407 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 407 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 408 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 408 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 409 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 409 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 410 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 410 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 411 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 411 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 412 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 412 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 413 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 413 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 414 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 414 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 415 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 415 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 416 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 416 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 417 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 417 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 418 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 418 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 419 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 419 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 420 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 420 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 421 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 421 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 422 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 422 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 423 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 423 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 424 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 424 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 425 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 425 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 426 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 426 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 427 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 427 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 428 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 428 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 429 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 429 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 430 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 430 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 431 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 431 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 432 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 432 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 433 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 433 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 434 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 434 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 435 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 435 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 436 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 436 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 437 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 437 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 438 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 438 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 439 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 439 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 440 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 440 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 441 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 441 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 442 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 442 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 443 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 443 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 444 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 444 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 445 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 445 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 446 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 446 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 447 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 447 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 448 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 448 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 449 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 449 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 450 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 450 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 451 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 451 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 452 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 452 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 453 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 453 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 454 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 454 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 455 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 455 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 456 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 456 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 457 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 457 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 458 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 458 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 459 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 459 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 460 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 460 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 461 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 461 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 462 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 462 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 463 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 463 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 464 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 464 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 465 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 465 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 466 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 466 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 467 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 467 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 468 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 468 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 469 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 469 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 470 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 470 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 471 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 471 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 472 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 472 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 473 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 473 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 474 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 474 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 475 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 475 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 476 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 476 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 477 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 477 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 478 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 478 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 479 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 479 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 480 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 480 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 481 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 481 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 482 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 482 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 483 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 483 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 484 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 484 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 485 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 485 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 486 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 486 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 487 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 487 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 488 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 488 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 489 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 489 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 490 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 490 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 491 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 491 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 492 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 492 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 493 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 493 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 494 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 494 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 495 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 495 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 496 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 496 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 497 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 497 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 498 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 498 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 499 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 499 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+    ==  Epoch: 500 | Training Loss: 0.695598 | Accuracy: 50.0000%  ==
+    ==  Epoch: 500 | Validation Loss: 0.695224 | Accuracy: 50.0000%  ==
+[[0 5]
+ [0 5]]
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36515662     36515662     scbertpre+    compute                                                                                                                                                                                                              32   00:08:40    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36515662.ba+ 36515662.ba+      batch                                                                                                                                                                                                               1         32   00:08:40    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

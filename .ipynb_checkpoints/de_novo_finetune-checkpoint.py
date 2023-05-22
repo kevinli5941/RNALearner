@@ -17,7 +17,7 @@ from torch import nn
 from torch.optim import Adam, SGD, AdamW
 from torch.nn import functional as F
 from torch.optim.lr_scheduler import StepLR, CosineAnnealingWarmRestarts, CyclicLR
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader, Dataset, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
 from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.distributed as dist
@@ -27,8 +27,10 @@ import scanpy as sc
 import anndata as ad
 from utils import *
 
+import matplotlib.pyplot as plt
+
 parser = argparse.ArgumentParser()
-parser.add_argument("--local_rank", type=int, default=-1, help='Local process rank.')
+parser.add_argument("--local-rank", type=int, default=-1, help='Local process rank.')
 parser.add_argument("--bin_num", type=int, default=5, help='Number of bins.')
 parser.add_argument("--gene_num", type=int, default=16906, help='Number of genes.')
 parser.add_argument("--epoch", type=int, default=100, help='Number of epochs.')
@@ -39,6 +41,7 @@ parser.add_argument("--grad_acc", type=int, default=60, help='Number of gradient
 parser.add_argument("--valid_every", type=int, default=1, help='Number of training epochs between twice validation.')
 parser.add_argument("--pos_embed", type=bool, default=True, help='Using Gene2vec encoding or not.')
 parser.add_argument("--data_path", type=str, default='./data/Zheng68K.h5ad', help='Path of data for finetune.')
+parser.add_argument("--data_path2", type=str, default=None, help='2nd dataset, optional.')
 parser.add_argument("--model_path", type=str, default=None, help='Path of pretrained model.')
 parser.add_argument("--ckpt_dir", type=str, default='./ckpts/', help='Directory of checkpoint to save.')
 parser.add_argument("--model_name", type=str, default='finetune', help='Finetuned model name.')
@@ -80,7 +83,9 @@ class SCDataset(Dataset):
         self.label = label
 
     def __getitem__(self, index):
-        rand_start = random.randint(0, self.data.shape[0]-1)
+        #rand_start = random.randint(0, self.data.shape[0]-1)
+        rand_start = index
+        
         full_seq = self.data[rand_start].toarray()[0]
         full_seq[full_seq > (CLASS - 2)] = CLASS - 2
         full_seq = torch.from_numpy(full_seq).long()
@@ -119,12 +124,23 @@ class Identity(torch.nn.Module):
         x = self.fc3(x)
         return x
 
-data = sc.read_h5ad(args.data_path)
-label_dict, label = np.unique(np.array(data.obs['y']), return_inverse=True)  # Convert strings categorical to integrate categorical, and label_dict[label] can be restored
-class_num = np.unique(label, return_counts=True)[1].tolist()
-class_weight = torch.tensor([(1 - (x / sum(class_num))) ** 2 for x in class_num])
-label = torch.from_numpy(label)
-data = data.X
+if not args.data_path2:
+    data = sc.read_h5ad(args.data_path)
+    label_dict, label = np.unique(np.array(data.obs['y']), return_inverse=True)  # Convert strings categorical to integrate categorical, and label_dict[label] can be restored
+    class_num = np.unique(label, return_counts=True)[1].tolist()
+    class_weight = torch.tensor([(1 - (x / sum(class_num))) ** 2 for x in class_num])
+    label = torch.from_numpy(label)
+    data = data.X
+
+else:
+    data1 = sc.read_h5ad(args.data_path)
+    data2 = sc.read_h5ad(args.data_path2)
+    data = data1.concatenate(data2)
+    label_dict, label = np.unique(np.array(data.obs['y']), return_inverse=True)  # Convert strings categorical to integrate categorical, and label_dict[label] can be restored
+    class_num = np.unique(label, return_counts=True)[1].tolist()
+    class_weight = torch.tensor([(1 - (x / sum(class_num))) ** 2 for x in class_num])
+    label = torch.from_numpy(label)
+    data = data.X
 
 acc = []
 f1 = []
@@ -132,22 +148,47 @@ f1w = []
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED)
 pred_list = pd.Series(['un'] * data.shape[0])
 
-sss = StratifiedShuffleSplit(n_splits=1, train_size=2, test_size=10, random_state=SEED)
-for index_train, index_val in sss.split(data, label):
-    data_train, label_train = data[index_train], label[index_train]
-    data_val, label_val = data[index_val], label[index_val]
-    print("Train label: ", label_train, " Val label: ", label_val)
-    print("Train data: ", data_train, " Val data: ", data_val)
+### OPTION ONE ###
+
+if not args.data_path2: #if no separate dataset for validation
+    sss = StratifiedShuffleSplit(n_splits=1, train_size=2, test_size=10, random_state=SEED)
+    for index_train, index_val in sss.split(data, label):
+        print("Test:", index_train, index_val)
+        data_train, label_train = data[index_train], label[index_train]
+        data_val, label_val = data[index_val], label[index_val]
+        print("Train label: ", label_train, " Val label: ", label_val)
+        train_dataset = SCDataset(data_train, label_train)
+        val_dataset = SCDataset(data_val, label_val)  
+else: #if second dataset for validatition
+    total_len = data.shape[0]
+    data_train, label_train = data[:total_len // 2], label[:total_len // 2]
+    data_val, label_val = data[total_len // 2:], label[total_len // 2:]
     train_dataset = SCDataset(data_train, label_train)
-    val_dataset = SCDataset(data_val, label_val)
+    val_dataset = SCDataset(data_val, label_val) 
 
-train_sampler = DistributedSampler(train_dataset, shuffle = False)
-val_sampler = DistributedSampler(val_dataset, shuffle = False)
-train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, sampler=train_sampler)
-val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, sampler=val_sampler)
+##########
+### OPTION TWO ###
+# sss = StratifiedShuffleSplit(n_splits=1, train_size=12, test_size=12, random_state=SEED)
+# for index_train, index_val in sss.split(data, label):
+#     print("Test:", index_train, index_val)
+#     data_train, label_train = data[index_train], label[index_train]
+#     data_val, label_val = data[index_val], label[index_val]
+#     print("Train label: ", label_train, " Val label: ", label_val)
+#     train_dataset = SCDataset(data_train, label_train)
+#     val_dataset = SCDataset(data_val, label_val) 
+##########
+    
+print(train_dataset.data.shape)
+print(val_dataset.data.shape) 
 
-# train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=False)
-# val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
+# train_sampler = DistributedSampler(train_dataset, shuffle = False)
+# val_sampler = DistributedSampler(val_dataset, shuffle = False)
+# train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, sampler=train_sampler)
+# val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, sampler=val_sampler)
+
+train_sampler = SequentialSampler(train_dataset)
+val_sampler = SequentialSampler(val_dataset)
+ 
 
 model = PerformerLM(
     num_tokens = CLASS,
@@ -161,7 +202,7 @@ model = PerformerLM(
 
 model.to_out = Identity(dropout=0., h_dim=128, out_dim=label_dict.shape[0])
 model = model.to(device)
-model = DDP(model, device_ids=[local_rank], output_device=local_rank)
+#model = DDP(model, device_ids=[local_rank], output_device=local_rank)
 
 # optimizer
 optimizer = Adam(model.parameters(), lr=LEARNING_RATE)
@@ -175,25 +216,61 @@ scheduler = CosineAnnealingWarmupRestarts(
     gamma=0.9
 )
 loss_fn = nn.CrossEntropyLoss(weight=None).to(local_rank)
-
 dist.barrier()
 trigger_times = 0
 max_acc = 0.0
+
+### testing ###
+# print("enumerate train_loader")
+# for i in train_sampler:
+#     print(i)
+# for i in train_sampler:
+#     print(i)
+# for i in train_sampler:
+#     print(i)
+
+def save_best_ckpt(epoch, model, optimizer, scheduler, losses, model_name, ckpt_folder):
+    """
+    保存模型checkpoint
+    """
+    if not os.path.exists(ckpt_folder):
+        os.makedirs(ckpt_folder)
+    torch.save(
+        {
+            'epoch': epoch,
+            'model_state_dict': model.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'scheduler_state_dict': scheduler.state_dict(),
+            'losses': losses,
+        },
+        f'{ckpt_folder}{model_name}_best.pth'
+    )
+
 print("begin training")
+train_losses = []
+val_losses = []
+train_accs = []
+val_accs = []
 for i in range(1, EPOCHS+1):
-    train_loader.sampler.set_epoch(i)
+    #train_loader.sampler.set_epoch(i)
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=False)
+    val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
     model.train()
     dist.barrier()
     running_loss = 0.0
     cum_acc = 0.0
     for index, (data, labels) in enumerate(train_loader):
+        print(index, data, labels)
         index += 1
         data, labels = data.to(device), labels.to(device)
         if index % GRADIENT_ACCUMULATION != 0:
-            with model.no_sync():
-                logits = model(data)
-                loss = loss_fn(logits, labels)
-                loss.backward()
+            # with model.no_sync():
+            #     logits = model(data)
+            #     loss = loss_fn(logits, labels)
+            #     loss.backward()
+            logits = model(data)
+            loss = loss_fn(logits, labels)
+            loss.backward()
         if index % GRADIENT_ACCUMULATION == 0:
             logits = model(data)
             loss = loss_fn(logits, labels)
@@ -212,6 +289,8 @@ for i in range(1, EPOCHS+1):
     epoch_acc = 100 * cum_acc / index
     epoch_loss = get_reduced(epoch_loss, local_rank, 0, world_size)
     epoch_acc = get_reduced(epoch_acc, local_rank, 0, world_size)
+    train_losses.append(epoch_loss)
+    train_accs.append(epoch_acc)
     if is_master:
         print(f'    ==  Epoch: {i} | Training Loss: {epoch_loss:.6f} | Accuracy: {epoch_acc:6.4f}%  ==')
     dist.barrier()
@@ -238,8 +317,10 @@ for i in range(1, EPOCHS+1):
                 truths.append(labels_v)
             del data_v, labels_v, logits, final_prob, final
             # gather
-            predictions = distributed_concat(torch.cat(predictions, dim=0), len(val_sampler.dataset), world_size)
-            truths = distributed_concat(torch.cat(truths, dim=0), len(val_sampler.dataset), world_size)
+            # predictions = distributed_concat(torch.cat(predictions, dim=0), len(val_sampler.dataset), world_size)
+            # truths = distributed_concat(torch.cat(truths, dim=0), len(val_sampler.dataset), world_size)
+            predictions = torch.cat(predictions, dim=0)
+            truths = torch.cat(truths, dim=0)
             
             no_drop = predictions != -1
             predictions = np.array((predictions[no_drop]).cpu())
@@ -260,6 +341,27 @@ for i in range(1, EPOCHS+1):
                 save_best_ckpt(i, model, optimizer, scheduler, val_loss, model_name, ckpt_dir)
             else:
                 trigger_times += 1
-                if trigger_times > PATIENCE:
-                    break
+                # if trigger_times > PATIENCE:
+                #     break
+        val_accs.append(val_acc)
+        val_losses.append(val_loss)
     del predictions, truths
+
+                        
+plt.figure(figsize=(10,5))
+plt.title("Training and Validation Accuracies")
+plt.plot(val_accs,label="val")
+plt.plot(train_accs,label="train")
+plt.xlabel("iterations")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.savefig("figures/" + args.model_name + "_acc")
+
+plt.figure(figsize=(10,5))
+plt.title("Training and Validation Loss")
+plt.plot(val_losses,label="val")
+plt.plot(train_losses,label="train")
+plt.xlabel("iterations")
+plt.ylabel("Loss")
+plt.legend()
+plt.savefig("figures/" + args.model_name + "_val") 

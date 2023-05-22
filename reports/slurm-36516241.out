@@ -1,0 +1,453 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+(6051, 15117)
+(1513, 15117)
+(6051, 15117)
+(1513, 15117)
+(6051, 15117)
+(1513, 15117)
+(6051, 15117)
+(1513, 15117)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+begin trainingbegin trainingbegin training
+
+begin training
+
+    ==  Epoch: 1 | Training Loss: 0.729388 | Accuracy: 21.8152%  ==
+    ==  Epoch: 1 | Validation Loss: 0.726123 | Accuracy: 21.7449%  ==
+[[   0 1184]
+ [   0  329]]
+    ==  Epoch: 2 | Training Loss: 0.657962 | Accuracy: 67.6238%  ==
+    ==  Epoch: 2 | Validation Loss: 0.544864 | Accuracy: 98.4798%  ==
+[[1184    0]
+ [  23  306]]
+    ==  Epoch: 3 | Training Loss: 0.268810 | Accuracy: 98.1518%  ==
+    ==  Epoch: 3 | Validation Loss: 0.050607 | Accuracy: 98.9425%  ==
+[[1184    0]
+ [  16  313]]
+    ==  Epoch: 4 | Training Loss: 0.017886 | Accuracy: 99.4224%  ==
+    ==  Epoch: 4 | Validation Loss: 0.007910 | Accuracy: 99.8017%  ==
+[[1181    3]
+ [   0  329]]
+    ==  Epoch: 5 | Training Loss: 0.005321 | Accuracy: 99.8020%  ==
+    ==  Epoch: 5 | Validation Loss: 0.002662 | Accuracy: 99.8678%  ==
+[[1184    0]
+ [   2  327]]
+    ==  Epoch: 6 | Training Loss: 0.002512 | Accuracy: 99.9010%  ==
+    ==  Epoch: 6 | Validation Loss: 0.001489 | Accuracy: 99.9339%  ==
+[[1183    1]
+ [   0  329]]
+    ==  Epoch: 7 | Training Loss: 0.000787 | Accuracy: 99.9670%  ==
+    ==  Epoch: 7 | Validation Loss: 0.000715 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 8 | Training Loss: 0.000596 | Accuracy: 100.0000%  ==
+    ==  Epoch: 8 | Validation Loss: 0.000509 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 9 | Training Loss: 0.000425 | Accuracy: 100.0000%  ==
+    ==  Epoch: 9 | Validation Loss: 0.000596 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 10 | Training Loss: 0.000298 | Accuracy: 100.0000%  ==
+    ==  Epoch: 10 | Validation Loss: 0.000409 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 11 | Training Loss: 0.000252 | Accuracy: 100.0000%  ==
+    ==  Epoch: 11 | Validation Loss: 0.000374 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 12 | Training Loss: 0.000245 | Accuracy: 100.0000%  ==
+    ==  Epoch: 12 | Validation Loss: 0.000361 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 13 | Training Loss: 0.000216 | Accuracy: 100.0000%  ==
+    ==  Epoch: 13 | Validation Loss: 0.000329 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 14 | Training Loss: 0.000197 | Accuracy: 100.0000%  ==
+    ==  Epoch: 14 | Validation Loss: 0.000333 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 15 | Training Loss: 0.000197 | Accuracy: 100.0000%  ==
+    ==  Epoch: 15 | Validation Loss: 0.000332 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 16 | Training Loss: 0.000195 | Accuracy: 100.0000%  ==
+    ==  Epoch: 16 | Validation Loss: 0.000327 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 17 | Training Loss: 0.000191 | Accuracy: 100.0000%  ==
+    ==  Epoch: 17 | Validation Loss: 0.000320 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 18 | Training Loss: 0.000186 | Accuracy: 100.0000%  ==
+    ==  Epoch: 18 | Validation Loss: 0.000299 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 19 | Training Loss: 0.000168 | Accuracy: 100.0000%  ==
+    ==  Epoch: 19 | Validation Loss: 0.000278 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 20 | Training Loss: 0.000152 | Accuracy: 100.0000%  ==
+    ==  Epoch: 20 | Validation Loss: 0.000254 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 21 | Training Loss: 0.000146 | Accuracy: 100.0000%  ==
+    ==  Epoch: 21 | Validation Loss: 0.000233 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 22 | Training Loss: 0.000117 | Accuracy: 100.0000%  ==
+    ==  Epoch: 22 | Validation Loss: 0.000223 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 23 | Training Loss: 0.000117 | Accuracy: 100.0000%  ==
+    ==  Epoch: 23 | Validation Loss: 0.000210 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 24 | Training Loss: 0.000092 | Accuracy: 100.0000%  ==
+    ==  Epoch: 24 | Validation Loss: 0.000178 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 25 | Training Loss: 0.000086 | Accuracy: 100.0000%  ==
+    ==  Epoch: 25 | Validation Loss: 0.000157 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 26 | Training Loss: 0.000073 | Accuracy: 100.0000%  ==
+    ==  Epoch: 26 | Validation Loss: 0.000153 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 27 | Training Loss: 0.000070 | Accuracy: 100.0000%  ==
+    ==  Epoch: 27 | Validation Loss: 0.000153 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 28 | Training Loss: 0.000065 | Accuracy: 100.0000%  ==
+    ==  Epoch: 28 | Validation Loss: 0.000135 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 29 | Training Loss: 0.000059 | Accuracy: 100.0000%  ==
+    ==  Epoch: 29 | Validation Loss: 0.000130 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 30 | Training Loss: 0.000055 | Accuracy: 100.0000%  ==
+    ==  Epoch: 30 | Validation Loss: 0.000127 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 31 | Training Loss: 0.000052 | Accuracy: 100.0000%  ==
+    ==  Epoch: 31 | Validation Loss: 0.000125 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 32 | Training Loss: 0.000052 | Accuracy: 100.0000%  ==
+    ==  Epoch: 32 | Validation Loss: 0.000123 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 33 | Training Loss: 0.000053 | Accuracy: 100.0000%  ==
+    ==  Epoch: 33 | Validation Loss: 0.000119 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 34 | Training Loss: 0.000049 | Accuracy: 100.0000%  ==
+    ==  Epoch: 34 | Validation Loss: 0.000117 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 35 | Training Loss: 0.000048 | Accuracy: 100.0000%  ==
+    ==  Epoch: 35 | Validation Loss: 0.000116 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 36 | Training Loss: 0.000047 | Accuracy: 100.0000%  ==
+    ==  Epoch: 36 | Validation Loss: 0.000114 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 37 | Training Loss: 0.000046 | Accuracy: 100.0000%  ==
+    ==  Epoch: 37 | Validation Loss: 0.000114 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 38 | Training Loss: 0.000046 | Accuracy: 100.0000%  ==
+    ==  Epoch: 38 | Validation Loss: 0.000114 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 39 | Training Loss: 0.000046 | Accuracy: 100.0000%  ==
+    ==  Epoch: 39 | Validation Loss: 0.000114 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 40 | Training Loss: 0.000046 | Accuracy: 100.0000%  ==
+    ==  Epoch: 40 | Validation Loss: 0.000114 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 41 | Training Loss: 0.000046 | Accuracy: 100.0000%  ==
+    ==  Epoch: 41 | Validation Loss: 0.000114 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 42 | Training Loss: 0.000046 | Accuracy: 100.0000%  ==
+    ==  Epoch: 42 | Validation Loss: 0.000113 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 43 | Training Loss: 0.000045 | Accuracy: 100.0000%  ==
+    ==  Epoch: 43 | Validation Loss: 0.000111 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 44 | Training Loss: 0.000043 | Accuracy: 100.0000%  ==
+    ==  Epoch: 44 | Validation Loss: 0.000105 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 45 | Training Loss: 0.000041 | Accuracy: 100.0000%  ==
+    ==  Epoch: 45 | Validation Loss: 0.000102 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 46 | Training Loss: 0.000040 | Accuracy: 100.0000%  ==
+    ==  Epoch: 46 | Validation Loss: 0.000097 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 47 | Training Loss: 0.000037 | Accuracy: 100.0000%  ==
+    ==  Epoch: 47 | Validation Loss: 0.000093 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 48 | Training Loss: 0.000035 | Accuracy: 100.0000%  ==
+    ==  Epoch: 48 | Validation Loss: 0.000091 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 49 | Training Loss: 0.000033 | Accuracy: 100.0000%  ==
+    ==  Epoch: 49 | Validation Loss: 0.000087 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 50 | Training Loss: 0.000031 | Accuracy: 100.0000%  ==
+    ==  Epoch: 50 | Validation Loss: 0.000083 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 51 | Training Loss: 0.000029 | Accuracy: 100.0000%  ==
+    ==  Epoch: 51 | Validation Loss: 0.000079 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 52 | Training Loss: 0.000027 | Accuracy: 100.0000%  ==
+    ==  Epoch: 52 | Validation Loss: 0.000075 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 53 | Training Loss: 0.000025 | Accuracy: 100.0000%  ==
+    ==  Epoch: 53 | Validation Loss: 0.000072 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 54 | Training Loss: 0.000025 | Accuracy: 100.0000%  ==
+    ==  Epoch: 54 | Validation Loss: 0.000072 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 55 | Training Loss: 0.000024 | Accuracy: 100.0000%  ==
+    ==  Epoch: 55 | Validation Loss: 0.000070 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 56 | Training Loss: 0.000023 | Accuracy: 100.0000%  ==
+    ==  Epoch: 56 | Validation Loss: 0.000068 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 57 | Training Loss: 0.000022 | Accuracy: 100.0000%  ==
+    ==  Epoch: 57 | Validation Loss: 0.000066 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 58 | Training Loss: 0.000021 | Accuracy: 100.0000%  ==
+    ==  Epoch: 58 | Validation Loss: 0.000064 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 59 | Training Loss: 0.000021 | Accuracy: 100.0000%  ==
+    ==  Epoch: 59 | Validation Loss: 0.000065 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 60 | Training Loss: 0.000020 | Accuracy: 100.0000%  ==
+    ==  Epoch: 60 | Validation Loss: 0.000062 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 61 | Training Loss: 0.000019 | Accuracy: 100.0000%  ==
+    ==  Epoch: 61 | Validation Loss: 0.000059 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 62 | Training Loss: 0.000019 | Accuracy: 100.0000%  ==
+    ==  Epoch: 62 | Validation Loss: 0.000060 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 63 | Training Loss: 0.000018 | Accuracy: 100.0000%  ==
+    ==  Epoch: 63 | Validation Loss: 0.000058 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 64 | Training Loss: 0.000018 | Accuracy: 100.0000%  ==
+    ==  Epoch: 64 | Validation Loss: 0.000057 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 65 | Training Loss: 0.000017 | Accuracy: 100.0000%  ==
+    ==  Epoch: 65 | Validation Loss: 0.000056 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 66 | Training Loss: 0.000017 | Accuracy: 100.0000%  ==
+    ==  Epoch: 66 | Validation Loss: 0.000055 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 67 | Training Loss: 0.000017 | Accuracy: 100.0000%  ==
+    ==  Epoch: 67 | Validation Loss: 0.000055 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 68 | Training Loss: 0.000016 | Accuracy: 100.0000%  ==
+    ==  Epoch: 68 | Validation Loss: 0.000054 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 69 | Training Loss: 0.000016 | Accuracy: 100.0000%  ==
+    ==  Epoch: 69 | Validation Loss: 0.000054 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 70 | Training Loss: 0.000016 | Accuracy: 100.0000%  ==
+    ==  Epoch: 70 | Validation Loss: 0.000054 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 71 | Training Loss: 0.000016 | Accuracy: 100.0000%  ==
+    ==  Epoch: 71 | Validation Loss: 0.000053 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 72 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 72 | Validation Loss: 0.000052 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 73 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 73 | Validation Loss: 0.000052 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 74 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 74 | Validation Loss: 0.000052 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 75 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 75 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 76 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 76 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 77 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 77 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 78 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 78 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 79 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 79 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 80 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 80 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 81 | Training Loss: 0.000014 | Accuracy: 100.0000%  ==
+    ==  Epoch: 81 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 82 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 82 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 83 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 83 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 84 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 84 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 85 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 85 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 86 | Training Loss: 0.000014 | Accuracy: 100.0000%  ==
+    ==  Epoch: 86 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 87 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 87 | Validation Loss: 0.000051 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 88 | Training Loss: 0.000015 | Accuracy: 100.0000%  ==
+    ==  Epoch: 88 | Validation Loss: 0.000050 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 89 | Training Loss: 0.000014 | Accuracy: 100.0000%  ==
+    ==  Epoch: 89 | Validation Loss: 0.000049 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 90 | Training Loss: 0.000014 | Accuracy: 100.0000%  ==
+    ==  Epoch: 90 | Validation Loss: 0.000048 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 91 | Training Loss: 0.000014 | Accuracy: 100.0000%  ==
+    ==  Epoch: 91 | Validation Loss: 0.000046 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 92 | Training Loss: 0.000013 | Accuracy: 100.0000%  ==
+    ==  Epoch: 92 | Validation Loss: 0.000045 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 93 | Training Loss: 0.000013 | Accuracy: 100.0000%  ==
+    ==  Epoch: 93 | Validation Loss: 0.000044 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 94 | Training Loss: 0.000012 | Accuracy: 100.0000%  ==
+    ==  Epoch: 94 | Validation Loss: 0.000043 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 95 | Training Loss: 0.000012 | Accuracy: 100.0000%  ==
+    ==  Epoch: 95 | Validation Loss: 0.000044 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 96 | Training Loss: 0.000012 | Accuracy: 100.0000%  ==
+    ==  Epoch: 96 | Validation Loss: 0.000043 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 97 | Training Loss: 0.000011 | Accuracy: 100.0000%  ==
+    ==  Epoch: 97 | Validation Loss: 0.000040 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 98 | Training Loss: 0.000011 | Accuracy: 100.0000%  ==
+    ==  Epoch: 98 | Validation Loss: 0.000040 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 99 | Training Loss: 0.000010 | Accuracy: 100.0000%  ==
+    ==  Epoch: 99 | Validation Loss: 0.000040 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+    ==  Epoch: 100 | Training Loss: 0.000010 | Accuracy: 100.0000%  ==
+    ==  Epoch: 100 | Validation Loss: 0.000039 | Accuracy: 100.0000%  ==
+[[1184    0]
+ [   0  329]]
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36516241     36516241          scout    compute                                                                                                                                                                                                              32   05:25:17    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36516241.ba+ 36516241.ba+      batch                                                                                                                                                                                                               1         32   05:25:17    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

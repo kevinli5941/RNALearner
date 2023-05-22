@@ -32,6 +32,7 @@ parser.add_argument("--pos_embed", type=bool, default=True, help='Using Gene2vec
 parser.add_argument("--data_path", type=str, default='./data/Zheng68K.h5ad', help='Path of data for predicting.')
 parser.add_argument("--model_path", type=str, default='./finetuned.pth', help='Path of finetuned model.')
 
+args = parser.parse_args()
 SEED = args.seed
 EPOCHS = args.epoch
 SEQ_LEN = args.gene_num + 1
@@ -41,7 +42,8 @@ UNASSIGN_THRES = args.unassign_thres if UNASSIGN == True else 0
 CLASS = args.bin_num + 2
 POS_EMBED_USING = args.pos_embed
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 
 class Identity(torch.nn.Module):
     def __init__(self, dropout = 0., h_dim = 100, out_dim = 10):
@@ -90,6 +92,8 @@ model.to_out = Identity(dropout=0., h_dim=128, out_dim=label_dict.shape[0])
 
 path = args.model_path
 ckpt = torch.load(path)
+print("DEBUG: ", len(model.state_dict()))
+print("DEBUG: ", len(ckpt['model_state_dict']))
 model.load_state_dict(ckpt['model_state_dict'])
 for param in model.parameters():
     param.requires_grad = False
@@ -112,7 +116,11 @@ with torch.no_grad():
         pred_final = pred_prob.argmax(dim=-1)
         if np.amax(np.array(pred_prob.cpu()), axis=-1) < UNASSIGN_THRES:
             novel_indices.append(index)
-        pred_finals.append(pred_final)
+        pred_finals.append(pred_final.item())
+print("Type: ", type(pred_finals))
+print("final predictions: ", pred_finals)
+print("Type: ", type(label_dict))
+print("label dict: ", label_dict)
 pred_list = label_dict[pred_finals].tolist()
 for index in novel_indices:
     pred_list[index] = 'Unassigned'

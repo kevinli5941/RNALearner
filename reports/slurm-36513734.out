@@ -1,0 +1,186 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+Train label:  tensor([0, 1, 1, 0, 1, 0])  Val label:  tensor([1, 0, 1, 0, 1, 0])
+Train data:    (0, 4)	0.021628723
+  (0, 6)	0.063068174
+  (0, 7)	0.08577608
+  (0, 11)	0.18175793
+  (0, 12)	0.96279836
+  (0, 13)	0.48441583
+  (0, 14)	0.5485209
+  (0, 16)	0.26496577
+  (0, 17)	1.2597061
+  (0, 18)	0.2553624
+  (0, 19)	0.24542917
+  (0, 20)	0.10981596
+  (0, 21)	0.22771434
+  (0, 22)	0.0042310576
+  (0, 23)	0.12349438
+  (0, 24)	0.09827026
+  (0, 25)	0.0869164
+  (0, 26)	0.5639582
+  (0, 27)	0.00060519704
+  (0, 28)	0.00060519704
+  (0, 29)	0.5747685
+  (0, 30)	0.31667116
+  (0, 31)	0.009953432
+  (0, 32)	0.32321766
+  (0, 33)	0.17346224
+  :	:
+  (5, 15091)	0.07650499
+  (5, 15092)	0.18983698
+  (5, 15093)	0.054189198
+  (5, 15094)	0.06659597
+  (5, 15095)	0.42328697
+  (5, 15096)	0.12099772
+  (5, 15097)	0.004410831
+  (5, 15098)	0.07320954
+  (5, 15100)	0.025645113
+  (5, 15101)	0.18956032
+  (5, 15102)	0.0022071013
+  (5, 15103)	0.07350944
+  (5, 15104)	0.13025299
+  (5, 15105)	0.6178096
+  (5, 15106)	0.14801782
+  (5, 15107)	0.004410831
+  (5, 15108)	0.2954252
+  (5, 15109)	0.07652893
+  (5, 15110)	0.10873598
+  (5, 15111)	0.34620088
+  (5, 15112)	0.010062156
+  (5, 15113)	1.6380116
+  (5, 15114)	0.32040483
+  (5, 15115)	0.6392403
+  (5, 15116)	0.5270031  Val data:    (0, 0)	0.00032679655
+  (0, 4)	0.02975963
+  (0, 6)	0.061738804
+  (0, 7)	0.037741527
+  (0, 11)	0.20472163
+  (0, 12)	0.85626626
+  (0, 13)	0.49759352
+  (0, 14)	0.5442856
+  (0, 16)	0.28175125
+  (0, 17)	1.0037279
+  (0, 18)	0.2537904
+  (0, 19)	0.264912
+  (0, 20)	0.1361909
+  (0, 21)	0.22890697
+  (0, 22)	0.002612302
+  (0, 23)	0.12574445
+  (0, 24)	0.08071512
+  (0, 25)	0.03933262
+  (0, 26)	0.52215296
+  (0, 28)	0.0009801676
+  (0, 29)	0.49249166
+  (0, 30)	0.27582437
+  (0, 31)	0.014956548
+  (0, 32)	0.30627587
+  (0, 33)	0.14774281
+  :	:
+  (5, 15091)	0.07000353
+  (5, 15092)	0.18958957
+  (5, 15093)	0.04418984
+  (5, 15094)	0.06611209
+  (5, 15095)	0.36665666
+  (5, 15096)	0.112130605
+  (5, 15097)	0.004412612
+  (5, 15098)	0.07711069
+  (5, 15100)	0.020589408
+  (5, 15101)	0.18899326
+  (5, 15102)	0.005090279
+  (5, 15103)	0.07807714
+  (5, 15104)	0.13088003
+  (5, 15105)	0.58157843
+  (5, 15106)	0.16190146
+  (5, 15107)	0.0067830547
+  (5, 15108)	0.29254267
+  (5, 15109)	0.07028202
+  (5, 15110)	0.101757966
+  (5, 15111)	0.36797434
+  (5, 15112)	0.011512289
+  (5, 15113)	1.5959512
+  (5, 15114)	0.31129417
+  (5, 15115)	0.65206695
+  (5, 15116)	0.51248145
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at ../aten/src/ATen/native/BatchLinearAlgebra.cpp:2349.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+begin training
+    ==  Epoch: 1 | Training Loss: 0.694435 | Accuracy: 50.0000%  ==
+    ==  Epoch: 1 | Validation Loss: 0.674930 | Accuracy: 66.6667%  ==
+[[0 2]
+ [0 4]]
+    ==  Epoch: 2 | Training Loss: 0.674559 | Accuracy: 66.6667%  ==
+    ==  Epoch: 2 | Validation Loss: 0.695304 | Accuracy: 50.0000%  ==
+[[0 3]
+ [0 3]]
+    ==  Epoch: 3 | Training Loss: 0.714722 | Accuracy: 33.3333%  ==
+    ==  Epoch: 3 | Validation Loss: 0.715080 | Accuracy: 33.3333%  ==
+[[0 4]
+ [0 2]]
+    ==  Epoch: 4 | Training Loss: 0.694589 | Accuracy: 50.0000%  ==
+    ==  Epoch: 4 | Validation Loss: 0.734492 | Accuracy: 16.6667%  ==
+[[0 5]
+ [0 1]]
+    ==  Epoch: 5 | Training Loss: 0.714475 | Accuracy: 33.3333%  ==
+    ==  Epoch: 5 | Validation Loss: 0.655494 | Accuracy: 83.3333%  ==
+[[0 1]
+ [0 5]]
+    ==  Epoch: 6 | Training Loss: 0.674160 | Accuracy: 66.6667%  ==
+    ==  Epoch: 6 | Validation Loss: 0.675477 | Accuracy: 66.6667%  ==
+[[0 2]
+ [0 4]]
+    ==  Epoch: 7 | Training Loss: 0.694655 | Accuracy: 50.0000%  ==
+    ==  Epoch: 7 | Validation Loss: 0.734958 | Accuracy: 16.6667%  ==
+[[0 5]
+ [0 1]]
+    ==  Epoch: 8 | Training Loss: 0.714465 | Accuracy: 33.3333%  ==
+    ==  Epoch: 8 | Validation Loss: 0.695115 | Accuracy: 50.0000%  ==
+[[0 3]
+ [0 3]]
+    ==  Epoch: 9 | Training Loss: 0.674790 | Accuracy: 66.6667%  ==
+    ==  Epoch: 9 | Validation Loss: 0.675101 | Accuracy: 66.6667%  ==
+[[0 2]
+ [0 4]]
+    ==  Epoch: 10 | Training Loss: 0.694635 | Accuracy: 50.0000%  ==
+    ==  Epoch: 10 | Validation Loss: 0.715057 | Accuracy: 33.3333%  ==
+[[0 4]
+ [0 2]]
+    ==  Epoch: 11 | Training Loss: 0.694789 | Accuracy: 50.0000%  ==
+    ==  Epoch: 11 | Validation Loss: 0.655428 | Accuracy: 83.3333%  ==
+[[0 1]
+ [0 5]]
+    ==  Epoch: 12 | Training Loss: 0.714344 | Accuracy: 33.3333%  ==
+    ==  Epoch: 12 | Validation Loss: 0.655222 | Accuracy: 83.3333%  ==
+[[0 1]
+ [0 5]]
+    ==  Epoch: 13 | Training Loss: 0.674539 | Accuracy: 66.6667%  ==
+    ==  Epoch: 13 | Validation Loss: 0.655547 | Accuracy: 83.3333%  ==
+[[0 1]
+ [0 5]]
+    ==  Epoch: 14 | Training Loss: 0.674464 | Accuracy: 66.6667%  ==
+    ==  Epoch: 14 | Validation Loss: 0.695317 | Accuracy: 50.0000%  ==
+[[0 3]
+ [0 3]]
+    ==  Epoch: 15 | Training Loss: 0.674476 | Accuracy: 66.6667%  ==
+    ==  Epoch: 15 | Validation Loss: 0.715081 | Accuracy: 33.3333%  ==
+[[0 4]
+ [0 2]]
+    ==  Epoch: 16 | Training Loss: 0.654469 | Accuracy: 83.3333%  ==
+    ==  Epoch: 16 | Validation Loss: 0.715384 | Accuracy: 33.3333%  ==
+[[0 4]
+ [0 2]]
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36513734     36513734     scbertpre+    compute                                                                                                                                                                                                              32   00:00:38    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36513734.ba+ 36513734.ba+      batch                                                                                                                                                                                                               1         32   00:00:38    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

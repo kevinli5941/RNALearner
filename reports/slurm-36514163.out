@@ -1,0 +1,222 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+Train label:  tensor([0, 1, 1, 0])  Val label:  tensor([0, 0, 1, 0, 1, 0, 1, 1])
+Train data:    (0, 4)	0.021628723
+  (0, 6)	0.063068174
+  (0, 7)	0.08577608
+  (0, 11)	0.18175793
+  (0, 12)	0.96279836
+  (0, 13)	0.48441583
+  (0, 14)	0.5485209
+  (0, 16)	0.26496577
+  (0, 17)	1.2597061
+  (0, 18)	0.2553624
+  (0, 19)	0.24542917
+  (0, 20)	0.10981596
+  (0, 21)	0.22771434
+  (0, 22)	0.0042310576
+  (0, 23)	0.12349438
+  (0, 24)	0.09827026
+  (0, 25)	0.0869164
+  (0, 26)	0.5639582
+  (0, 27)	0.00060519704
+  (0, 28)	0.00060519704
+  (0, 29)	0.5747685
+  (0, 30)	0.31667116
+  (0, 31)	0.009953432
+  (0, 32)	0.32321766
+  (0, 33)	0.17346224
+  :	:
+  (3, 15091)	0.07650499
+  (3, 15092)	0.18983698
+  (3, 15093)	0.054189198
+  (3, 15094)	0.06659597
+  (3, 15095)	0.42328697
+  (3, 15096)	0.12099772
+  (3, 15097)	0.004410831
+  (3, 15098)	0.07320954
+  (3, 15100)	0.025645113
+  (3, 15101)	0.18956032
+  (3, 15102)	0.0022071013
+  (3, 15103)	0.07350944
+  (3, 15104)	0.13025299
+  (3, 15105)	0.6178096
+  (3, 15106)	0.14801782
+  (3, 15107)	0.004410831
+  (3, 15108)	0.2954252
+  (3, 15109)	0.07652893
+  (3, 15110)	0.10873598
+  (3, 15111)	0.34620088
+  (3, 15112)	0.010062156
+  (3, 15113)	1.6380116
+  (3, 15114)	0.32040483
+  (3, 15115)	0.6392403
+  (3, 15116)	0.5270031  Val data:    (0, 0)	0.00034509262
+  (0, 1)	0.00034509262
+  (0, 4)	0.028365424
+  (0, 6)	0.076619454
+  (0, 7)	0.05452317
+  (0, 8)	0.0006901027
+  (0, 11)	0.20192932
+  (0, 12)	0.9122941
+  (0, 13)	0.48763376
+  (0, 14)	0.575486
+  (0, 16)	0.26590177
+  (0, 17)	1.1883477
+  (0, 18)	0.255242
+  (0, 19)	0.23468374
+  (0, 20)	0.14532304
+  (0, 21)	0.25408486
+  (0, 22)	0.0041356734
+  (0, 23)	0.16269352
+  (0, 24)	0.08607956
+  (0, 25)	0.06379863
+  (0, 26)	0.52960086
+  (0, 29)	0.51204085
+  (0, 30)	0.30162296
+  (0, 31)	0.006199072
+  (0, 32)	0.34220973
+  :	:
+  (7, 15091)	0.087239996
+  (7, 15092)	0.20626134
+  (7, 15093)	0.05290421
+  (7, 15094)	0.07657601
+  (7, 15095)	0.44187468
+  (7, 15096)	0.14205071
+  (7, 15097)	0.008349995
+  (7, 15098)	0.0838086
+  (7, 15100)	0.023115952
+  (7, 15101)	0.19866718
+  (7, 15102)	0.0032731472
+  (7, 15103)	0.04516178
+  (7, 15104)	0.13178568
+  (7, 15105)	0.6154165
+  (7, 15106)	0.13709289
+  (7, 15107)	0.008349995
+  (7, 15108)	0.32146168
+  (7, 15109)	0.043325666
+  (7, 15110)	0.11446849
+  (7, 15111)	0.37494433
+  (7, 15112)	0.012326451
+  (7, 15113)	1.6794037
+  (7, 15114)	0.265314
+  (7, 15115)	0.66402185
+  (7, 15116)	0.53979397
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at ../aten/src/ATen/native/BatchLinearAlgebra.cpp:2349.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+begin training
+    ==  Epoch: 1 | Training Loss: 0.714810 | Accuracy: 33.3333%  ==
+    ==  Epoch: 1 | Validation Loss: 0.681961 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 2 | Training Loss: 0.715001 | Accuracy: 33.3333%  ==
+    ==  Epoch: 2 | Validation Loss: 0.695155 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 3 | Training Loss: 0.674769 | Accuracy: 66.6667%  ==
+    ==  Epoch: 3 | Validation Loss: 0.675551 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 4 | Training Loss: 0.694820 | Accuracy: 50.0000%  ==
+    ==  Epoch: 4 | Validation Loss: 0.708266 | Accuracy: 37.5000%  ==
+[[0 5]
+ [0 3]]
+    ==  Epoch: 5 | Training Loss: 0.714841 | Accuracy: 33.3333%  ==
+    ==  Epoch: 5 | Validation Loss: 0.661667 | Accuracy: 75.0000%  ==
+[[0 2]
+ [0 6]]
+    ==  Epoch: 6 | Training Loss: 0.674738 | Accuracy: 66.6667%  ==
+    ==  Epoch: 6 | Validation Loss: 0.695142 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 7 | Training Loss: 0.754709 | Accuracy: 0.0000%  ==
+    ==  Epoch: 7 | Validation Loss: 0.714765 | Accuracy: 37.5000%  ==
+[[0 5]
+ [0 3]]
+    ==  Epoch: 8 | Training Loss: 0.735021 | Accuracy: 16.6667%  ==
+    ==  Epoch: 8 | Validation Loss: 0.707917 | Accuracy: 37.5000%  ==
+[[0 5]
+ [0 3]]
+    ==  Epoch: 9 | Training Loss: 0.694630 | Accuracy: 50.0000%  ==
+    ==  Epoch: 9 | Validation Loss: 0.695165 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 10 | Training Loss: 0.714477 | Accuracy: 33.3333%  ==
+    ==  Epoch: 10 | Validation Loss: 0.687924 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 11 | Training Loss: 0.654748 | Accuracy: 83.3333%  ==
+    ==  Epoch: 11 | Validation Loss: 0.714542 | Accuracy: 37.5000%  ==
+[[0 5]
+ [0 3]]
+    ==  Epoch: 12 | Training Loss: 0.654779 | Accuracy: 83.3333%  ==
+    ==  Epoch: 12 | Validation Loss: 0.688213 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 13 | Training Loss: 0.674769 | Accuracy: 66.6667%  ==
+    ==  Epoch: 13 | Validation Loss: 0.694979 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 14 | Training Loss: 0.734387 | Accuracy: 16.6667%  ==
+    ==  Epoch: 14 | Validation Loss: 0.648336 | Accuracy: 87.5000%  ==
+[[0 1]
+ [0 7]]
+    ==  Epoch: 15 | Training Loss: 0.634439 | Accuracy: 100.0000%  ==
+    ==  Epoch: 15 | Validation Loss: 0.701569 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 16 | Training Loss: 0.674609 | Accuracy: 66.6667%  ==
+    ==  Epoch: 16 | Validation Loss: 0.661761 | Accuracy: 75.0000%  ==
+[[0 2]
+ [0 6]]
+    ==  Epoch: 17 | Training Loss: 0.734720 | Accuracy: 16.6667%  ==
+    ==  Epoch: 17 | Validation Loss: 0.681415 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 18 | Training Loss: 0.674769 | Accuracy: 66.6667%  ==
+    ==  Epoch: 18 | Validation Loss: 0.695089 | Accuracy: 50.0000%  ==
+[[0 4]
+ [0 4]]
+    ==  Epoch: 19 | Training Loss: 0.714668 | Accuracy: 33.3333%  ==
+    ==  Epoch: 19 | Validation Loss: 0.674713 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 20 | Training Loss: 0.734720 | Accuracy: 16.6667%  ==
+    ==  Epoch: 20 | Validation Loss: 0.741255 | Accuracy: 12.5000%  ==
+[[0 7]
+ [0 1]]
+    ==  Epoch: 21 | Training Loss: 0.634758 | Accuracy: 100.0000%  ==
+    ==  Epoch: 21 | Validation Loss: 0.688051 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 22 | Training Loss: 0.714557 | Accuracy: 33.3333%  ==
+    ==  Epoch: 22 | Validation Loss: 0.674685 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 23 | Training Loss: 0.654779 | Accuracy: 83.3333%  ==
+    ==  Epoch: 23 | Validation Loss: 0.674988 | Accuracy: 62.5000%  ==
+[[0 3]
+ [0 5]]
+    ==  Epoch: 24 | Training Loss: 0.754931 | Accuracy: 0.0000%  ==
+    ==  Epoch: 24 | Validation Loss: 0.708210 | Accuracy: 37.5000%  ==
+[[0 5]
+ [0 3]]
+    ==  Epoch: 25 | Training Loss: 0.634758 | Accuracy: 100.0000%  ==
+    ==  Epoch: 25 | Validation Loss: 0.715110 | Accuracy: 37.5000%  ==
+[[0 5]
+ [0 3]]
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36514163     36514163     scbertpre+    compute                                                                                                                                                                                                              32   00:01:29    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36514163.ba+ 36514163.ba+      batch                                                                                                                                                                                                               1         32   00:01:29    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

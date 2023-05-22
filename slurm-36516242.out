@@ -1,0 +1,140 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+(13820, 15117)
+(3455, 15117)
+(13820, 15117)
+(3455, 15117)
+(13820, 15117)
+(3455, 15117)
+(13820, 15117)
+(3455, 15117)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+begin trainingbegin trainingbegin training
+
+
+begin training
+    ==  Epoch: 1 | Training Loss: 0.676522 | Accuracy: 63.3970%  ==
+    ==  Epoch: 1 | Validation Loss: 0.674552 | Accuracy: 63.3864%  ==
+[[   0 1265]
+ [   0 2190]]
+    ==  Epoch: 2 | Training Loss: 0.465431 | Accuracy: 84.2014%  ==
+    ==  Epoch: 2 | Validation Loss: 0.139266 | Accuracy: 97.8003%  ==
+[[1193   72]
+ [   4 2186]]
+    ==  Epoch: 3 | Training Loss: 0.045654 | Accuracy: 98.8571%  ==
+    ==  Epoch: 3 | Validation Loss: 0.019728 | Accuracy: 99.1896%  ==
+[[1253   12]
+ [  16 2174]]
+    ==  Epoch: 4 | Training Loss: 0.014481 | Accuracy: 99.4141%  ==
+    ==  Epoch: 4 | Validation Loss: 0.019447 | Accuracy: 99.1027%  ==
+[[1263    2]
+ [  29 2161]]
+    ==  Epoch: 5 | Training Loss: 0.007475 | Accuracy: 99.7830%  ==
+    ==  Epoch: 5 | Validation Loss: 0.011046 | Accuracy: 99.5948%  ==
+[[1258    7]
+ [   7 2183]]
+    ==  Epoch: 6 | Training Loss: 0.004007 | Accuracy: 99.9132%  ==
+    ==  Epoch: 6 | Validation Loss: 0.010131 | Accuracy: 99.7395%  ==
+[[1260    5]
+ [   4 2186]]
+    ==  Epoch: 7 | Training Loss: 0.002911 | Accuracy: 99.9421%  ==
+    ==  Epoch: 7 | Validation Loss: 0.010918 | Accuracy: 99.5948%  ==
+[[1261    4]
+ [  10 2180]]
+    ==  Epoch: 8 | Training Loss: 0.002613 | Accuracy: 99.9277%  ==
+    ==  Epoch: 8 | Validation Loss: 0.011340 | Accuracy: 99.5658%  ==
+[[1262    3]
+ [  12 2178]]
+    ==  Epoch: 9 | Training Loss: 0.002059 | Accuracy: 99.9638%  ==
+    ==  Epoch: 9 | Validation Loss: 0.010978 | Accuracy: 99.6527%  ==
+[[1257    8]
+ [   4 2186]]
+slurmstepd: error: *** JOB 36516242 ON gpu012 CANCELLED AT 2023-04-23T01:51:35 ***
+WARNING:torch.distributed.elastic.agent.server.api:Received 15 death signal, shutting down workers
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363378 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363379 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363380 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363381 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363378 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363379 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363380 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 363381 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 723, in run
+    result = self._invoke_run(role)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 363375 got signal: 15
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 241, in launch_agent
+    result = agent.run()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/metrics/api.py", line 129, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/api.py", line 730, in run
+    self._shutdown(e.sigval)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/agent/server/local_elastic_agent.py", line 289, in _shutdown
+    self._pcontext.close(death_sig)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 331, in close
+    self._close(death_sig=death_sig, timeout=timeout)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 708, in _close
+    handler.proc.wait(time_to_wait)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/subprocess.py", line 1911, in _wait
+    time.sleep(delay)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 363375 got signal: 15

@@ -1,0 +1,192 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+Train label:  tensor([0, 1, 1, 0, 1, 0])  Val label:  tensor([1, 0, 1, 0, 1, 0])
+Train data:    (0, 4)	0.021628723
+  (0, 6)	0.063068174
+  (0, 7)	0.08577608
+  (0, 11)	0.18175793
+  (0, 12)	0.96279836
+  (0, 13)	0.48441583
+  (0, 14)	0.5485209
+  (0, 16)	0.26496577
+  (0, 17)	1.2597061
+  (0, 18)	0.2553624
+  (0, 19)	0.24542917
+  (0, 20)	0.10981596
+  (0, 21)	0.22771434
+  (0, 22)	0.0042310576
+  (0, 23)	0.12349438
+  (0, 24)	0.09827026
+  (0, 25)	0.0869164
+  (0, 26)	0.5639582
+  (0, 27)	0.00060519704
+  (0, 28)	0.00060519704
+  (0, 29)	0.5747685
+  (0, 30)	0.31667116
+  (0, 31)	0.009953432
+  (0, 32)	0.32321766
+  (0, 33)	0.17346224
+  :	:
+  (5, 15091)	0.07650499
+  (5, 15092)	0.18983698
+  (5, 15093)	0.054189198
+  (5, 15094)	0.06659597
+  (5, 15095)	0.42328697
+  (5, 15096)	0.12099772
+  (5, 15097)	0.004410831
+  (5, 15098)	0.07320954
+  (5, 15100)	0.025645113
+  (5, 15101)	0.18956032
+  (5, 15102)	0.0022071013
+  (5, 15103)	0.07350944
+  (5, 15104)	0.13025299
+  (5, 15105)	0.6178096
+  (5, 15106)	0.14801782
+  (5, 15107)	0.004410831
+  (5, 15108)	0.2954252
+  (5, 15109)	0.07652893
+  (5, 15110)	0.10873598
+  (5, 15111)	0.34620088
+  (5, 15112)	0.010062156
+  (5, 15113)	1.6380116
+  (5, 15114)	0.32040483
+  (5, 15115)	0.6392403
+  (5, 15116)	0.5270031  Val data:    (0, 0)	0.00032679655
+  (0, 4)	0.02975963
+  (0, 6)	0.061738804
+  (0, 7)	0.037741527
+  (0, 11)	0.20472163
+  (0, 12)	0.85626626
+  (0, 13)	0.49759352
+  (0, 14)	0.5442856
+  (0, 16)	0.28175125
+  (0, 17)	1.0037279
+  (0, 18)	0.2537904
+  (0, 19)	0.264912
+  (0, 20)	0.1361909
+  (0, 21)	0.22890697
+  (0, 22)	0.002612302
+  (0, 23)	0.12574445
+  (0, 24)	0.08071512
+  (0, 25)	0.03933262
+  (0, 26)	0.52215296
+  (0, 28)	0.0009801676
+  (0, 29)	0.49249166
+  (0, 30)	0.27582437
+  (0, 31)	0.014956548
+  (0, 32)	0.30627587
+  (0, 33)	0.14774281
+  :	:
+  (5, 15091)	0.07000353
+  (5, 15092)	0.18958957
+  (5, 15093)	0.04418984
+  (5, 15094)	0.06611209
+  (5, 15095)	0.36665666
+  (5, 15096)	0.112130605
+  (5, 15097)	0.004412612
+  (5, 15098)	0.07711069
+  (5, 15100)	0.020589408
+  (5, 15101)	0.18899326
+  (5, 15102)	0.005090279
+  (5, 15103)	0.07807714
+  (5, 15104)	0.13088003
+  (5, 15105)	0.58157843
+  (5, 15106)	0.16190146
+  (5, 15107)	0.0067830547
+  (5, 15108)	0.29254267
+  (5, 15109)	0.07028202
+  (5, 15110)	0.101757966
+  (5, 15111)	0.36797434
+  (5, 15112)	0.011512289
+  (5, 15113)	1.5959512
+  (5, 15114)	0.31129417
+  (5, 15115)	0.65206695
+  (5, 15116)	0.51248145
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at ../aten/src/ATen/native/BatchLinearAlgebra.cpp:2349.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+begin training
+Traceback (most recent call last):
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/de_novo_finetune.py", line 194, in <module>
+    logits = model(data)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1040, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1000, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py", line 630, in forward
+    x = self.performer(x, pos_emb = layer_pos_emb, output_attentions = output_attentions, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py", line 544, in forward
+    return self.net(x, output_attentions = output_attentions, **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/reversible.py", line 144, in forward
+    x = x + f(x, **f_args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py", line 298, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py", line 395, in forward
+    out = self.fast_attention(q, k, v)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py", line 250, in forward
+    k = create_kernel(k, is_query = False)
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py", line 93, in softmax_kernel
+    torch.exp(data_dash - diag_data - torch.max(data_dash)) + eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 922.00 MiB (GPU 0; 31.74 GiB total capacity; 30.14 GiB already allocated; 197.38 MiB free; 30.49 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 3673570) of binary: /home/kli3/.conda/envs/scbert/bin/python3
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 195, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 191, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 176, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 246, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+de_novo_finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-03-18_07:19:19
+  host      : gpu008.atstor.adapt.nccs.nasa.gov
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3673570)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36513733     36513733     scbertpre+    compute                                                                                                                                                                                                              32   00:00:13    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36513733.ba+ 36513733.ba+      batch                                                                                                                                                                                                               1         32   00:00:13    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 

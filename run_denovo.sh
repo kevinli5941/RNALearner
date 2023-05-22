@@ -12,17 +12,26 @@ module load nvidia
 conda activate scbert
 
 dataPath="data/osd105/osd105_preprocessed_ensembl_15117.h5ad"
+dataPath2="data/osd104/osd104_preprocessed_ensembl_15117.h5ad"
 geneNum=15117
-modelName="denovo_from_27_lr10e4"
+modelName="denovo_lr10e5_training2"
 modelPath="ckpts/recount3_mouse_15117_bulk_pretrain_continuation_1_bs_3_lr1e5_17.pth"
 binNum=7
-epoch=50
+epoch=1000
 batchSize=2
-lr=1e-4
+lr=1e-5
 
 numGPUs=1
+### tWO dataset
 
-python3 -m torch.distributed.launch --nproc_per_node=$numGPUs de_novo_finetune.py --data_path $dataPath --gene_num $geneNum --model_name $modelName --bin_num $binNum --learning_rate $lr --epoch $epoch --batch_size $batchSize --model_path $modelPath
+# gradAcc=6
+# python3 -m torch.distributed.launch --nproc_per_node=$numGPUs de_novo_finetune.py --data_path $dataPath --gene_num $geneNum --model_name $modelName --bin_num $binNum --learning_rate $lr --epoch $epoch --batch_size $batchSize --model_path $modelPath --grad_acc $gradAcc --data_path2 $dataPath2
+
+### 1 dataset problem
+
+gradAcc=1
+
+python3 -m torch.distributed.launch --nproc_per_node=$numGPUs new_finetune.py --data_path $dataPath --gene_num $geneNum --model_name $modelName --bin_num $binNum --learning_rate $lr --epoch $epoch --batch_size $batchSize --model_path $modelPath --grad_acc $gradAcc
 
 mv slurm-$SLURM_JOB_ID.out reports/
 sacct -l -j $SLURM_JOB_ID

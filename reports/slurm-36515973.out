@@ -1,0 +1,142 @@
+/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+Test: [6 2] [ 1  3  4  0  8  5  7  9 10 11]
+Train label:  tensor([1, 0])  Val label:  tensor([0, 0, 0, 0, 1, 0, 1, 1, 1, 1])
+(2, 15117)
+(10, 15117)
+/panfs/ccds02/nobackup/people/kli3/RNALearner/performer_pytorch/performer_pytorch.py:115: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /opt/conda/conda-bld/pytorch_1678402374358/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2425.)
+  q, r = torch.qr(unstructured_block.cpu(), some = True)
+yes path!
+begin training
+0 tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]], device='cuda:0') tensor([1, 0])
+token_emb.weight has no guide value
+pos_emb.emb.weight has no guide value
+performer.net.layers.0.0.norm.weight has no guide value
+performer.net.layers.0.0.norm.bias has no guide value
+performer.net.layers.0.0.fn.to_q.weight has no guide value
+performer.net.layers.0.0.fn.to_k.weight has no guide value
+performer.net.layers.0.0.fn.to_v.weight has no guide value
+performer.net.layers.0.0.fn.to_out.weight has no guide value
+performer.net.layers.0.0.fn.to_out.bias has no guide value
+performer.net.layers.0.1.norm.weight has no guide value
+performer.net.layers.0.1.norm.bias has no guide value
+performer.net.layers.0.1.fn.fn.w1.weight has no guide value
+performer.net.layers.0.1.fn.fn.w1.bias has no guide value
+performer.net.layers.0.1.fn.fn.w2.weight has no guide value
+performer.net.layers.0.1.fn.fn.w2.bias has no guide value
+performer.net.layers.1.0.norm.weight has no guide value
+performer.net.layers.1.0.norm.bias has no guide value
+performer.net.layers.1.0.fn.to_q.weight has no guide value
+performer.net.layers.1.0.fn.to_k.weight has no guide value
+performer.net.layers.1.0.fn.to_v.weight has no guide value
+performer.net.layers.1.0.fn.to_out.weight has no guide value
+performer.net.layers.1.0.fn.to_out.bias has no guide value
+performer.net.layers.1.1.norm.weight has no guide value
+performer.net.layers.1.1.norm.bias has no guide value
+performer.net.layers.1.1.fn.fn.w1.weight has no guide value
+performer.net.layers.1.1.fn.fn.w1.bias has no guide value
+performer.net.layers.1.1.fn.fn.w2.weight has no guide value
+performer.net.layers.1.1.fn.fn.w2.bias has no guide value
+performer.net.layers.2.0.norm.weight has no guide value
+performer.net.layers.2.0.norm.bias has no guide value
+performer.net.layers.2.0.fn.to_q.weight has no guide value
+performer.net.layers.2.0.fn.to_k.weight has no guide value
+performer.net.layers.2.0.fn.to_v.weight has no guide value
+performer.net.layers.2.0.fn.to_out.weight has no guide value
+performer.net.layers.2.0.fn.to_out.bias has no guide value
+performer.net.layers.2.1.norm.weight has no guide value
+performer.net.layers.2.1.norm.bias has no guide value
+performer.net.layers.2.1.fn.fn.w1.weight has no guide value
+performer.net.layers.2.1.fn.fn.w1.bias has no guide value
+performer.net.layers.2.1.fn.fn.w2.weight has no guide value
+performer.net.layers.2.1.fn.fn.w2.bias has no guide value
+performer.net.layers.3.0.norm.weight has no guide value
+performer.net.layers.3.0.norm.bias has no guide value
+performer.net.layers.3.0.fn.to_q.weight has no guide value
+performer.net.layers.3.0.fn.to_k.weight has no guide value
+performer.net.layers.3.0.fn.to_v.weight has no guide value
+performer.net.layers.3.0.fn.to_out.weight has no guide value
+performer.net.layers.3.0.fn.to_out.bias has no guide value
+performer.net.layers.3.1.norm.weight has no guide value
+performer.net.layers.3.1.norm.bias has no guide value
+performer.net.layers.3.1.fn.fn.w1.weight has no guide value
+performer.net.layers.3.1.fn.fn.w1.bias has no guide value
+performer.net.layers.3.1.fn.fn.w2.weight has no guide value
+performer.net.layers.3.1.fn.fn.w2.bias has no guide value
+mask_vak:  tensor([0.8575, 0.5929, 0.9716, 0.5274, 0.2603, 0.3645, 1.0000, 0.7693, 0.5561,
+        0.7444, 0.6464, 0.3248, 0.5519, 0.5475, 0.3525, 0.8375, 0.3798, 0.5084,
+        0.3590, 0.6918, 0.7014, 0.5005, 0.4866, 0.4502, 0.3564, 0.6413, 0.3350,
+        0.7131, 0.5398, 0.6395, 0.6633, 0.3542, 0.7688, 0.5977, 0.5038, 0.6832,
+        0.2813, 0.5809, 0.5148, 0.7630, 0.3076, 0.8422, 0.1076, 0.6069, 0.4488,
+        0.2926, 0.5764, 0.4399, 0.5758, 0.5702, 0.1293, 0.7000, 0.4726, 0.6460,
+        0.7901, 0.7838, 0.6316, 0.5585, 0.6761, 0.7563, 0.2480, 0.8038, 0.3519,
+        0.5843, 0.6603, 0.5633, 0.6588, 0.7766, 0.3583, 0.5731, 0.1211, 0.1411,
+        0.1881, 0.4436, 0.3374, 0.5455, 0.2347, 0.2991, 0.6651, 0.1620, 0.3041,
+        0.7175, 0.5768, 0.0937, 0.6702, 0.5901, 0.3815, 0.2664, 0.3715, 0.2345,
+        0.6619, 0.5943, 0.8468, 0.5688, 0.4593, 0.7456, 0.2595, 0.4871, 0.0647,
+        0.7687, 0.6902, 0.6590, 0.1516, 0.5916, 0.5459, 0.1791, 0.7923, 0.4417,
+        0.6365, 0.1762, 0.0790, 0.2638, 0.7926, 0.7770, 0.5697, 0.4458, 0.5626,
+        0.7298, 0.7503, 0.5993, 0.6063, 0.5101, 0.5037, 0.7992, 0.5631, 0.5782,
+        0.5744, 0.7886, 0.7582, 0.5555, 0.6585, 0.6762, 0.3595, 0.1731, 0.7458,
+        0.0388, 0.8823, 0.5647, 0.4653, 0.4172, 0.0644, 0.8477, 0.9127, 0.5092,
+        0.7687, 0.3729, 0.7140, 0.6346, 0.4270, 0.8033, 0.2764, 0.6672, 0.2763,
+        0.6682, 0.6934, 0.2363, 0.5880, 0.6871, 0.3464, 0.4413, 0.2536, 0.4858,
+        0.4987, 0.4371, 0.5759, 0.6393, 0.5577, 0.5523, 0.6923, 0.1856, 0.5308,
+        0.5831, 0.6435, 0.7219, 0.6896, 0.4033, 0.2797, 0.5751, 0.4795, 0.5144,
+        0.1815, 0.6462, 0.0000, 0.6255, 0.6881, 0.5791, 0.4062, 0.4607, 0.5849,
+        0.2056, 0.6647, 0.6707, 0.6975, 0.6837, 0.5271, 0.7859, 0.4080, 0.6308,
+        0.5612, 0.6472], device='cuda:0')
+Traceback (most recent call last):
+  File "/panfs/ccds02/nobackup/people/kli3/RNALearner/new_finetune.py", line 275, in <module>
+    param.grad = 0
+TypeError: assigned grad expected to be a Tensor or None but got grad of typeint
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 3666498) of binary: /home/kli3/.conda/envs/scbert/bin/python3
+Traceback (most recent call last):
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/kli3/.conda/envs/scbert/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+new_finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-04-19_04:09:33
+  host      : gpu010.atstor.adapt.nccs.nasa.gov
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3666498)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+JobID        JobIDRaw        JobName  Partition  MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks  AllocCPUS    Elapsed      State ExitCode AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov     ReqMem ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask   AveDiskWrite    ReqTRES  AllocTRES TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutAve TRESUsageOutTot 
+------------ ------------ ---------- ---------- ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- ---------- -------------- ------------ --------------- --------------- -------------- ------------ ---------------- ---------------- -------------- ---------- ---------- -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- ------------------- ------------------- --------------- --------------- 
+36515973     36515973     scbertpre+    compute                                                                                                                                                                                                              32   00:00:15    RUNNING      0:0                  Unknown       Unknown       Unknown       720G                                                                                                                                          billing=3+ billing=3+                                                                                                                                                                                                                                 
+36515973.ba+ 36515973.ba+      batch                                                                                                                                                                                                               1         32   00:00:15    RUNNING      0:0          0             0             0             0                         0                                                                                                                                      cpu=32,gr+                                                                                                                                                                                                                                 
