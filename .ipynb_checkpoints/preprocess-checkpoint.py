@@ -1,11 +1,13 @@
 import scanpy as sc, numpy as np, pandas as pd, anndata as ad
 from scipy import sparse
 
-### [OPTION ONE] ###
-# new = sc.read_h5ad('./data/recount3/mouse_FULL_sparse_with_geneIDs_with_metadata.h5ad') # for pre-training
-######
+### [OPTION ONE]: FOR PRETRAINING DATASETS ####
 
-### [OPTION TWO] ###
+# new = sc.read_h5ad('./data/recount3/mouse_FULL_sparse_with_geneIDs_with_metadata.h5ad')
+
+###############################################
+
+### [OPTION TWO]: FOR DOWNSTREAM DATASETS #####
 panglao = sc.read_h5ad('./data/recount3/preprocessed_mouse_gene2vec_15117_compatible_bulk_only.h5ad')
 #data = sc.read_h5ad('./data/osd105/osd105_raw_ensembl_all_genes.h5ad')
 data = sc.read_h5ad('./data/osd99/osd99_raw_ensembl_all_genes.h5ad')
@@ -34,7 +36,7 @@ new.obs_names = data.obs_names
 new.obs = data.obs
 new.uns = panglao.uns
 
-######
+###############################################
 
 with open('reports/preprocessing_progress.txt', 'w') as f:
     f.write('\nbegin filtering cells')
