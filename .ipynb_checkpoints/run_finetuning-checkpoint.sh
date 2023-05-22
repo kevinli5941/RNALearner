@@ -24,17 +24,21 @@ maskPath="masks/mask17guidepred.pt"
 
 numGPUs=1
 
-### 2 dataset problem
+#### 2 dataset problem ########
 
 gradAcc=6
 
 python3 -m torch.distributed.launch --nproc_per_node=$numGPUs new_finetune.py --data_path $dataPath --gene_num $geneNum --model_name $modelName --bin_num $binNum --learning_rate $lr --epoch $epoch --batch_size $batchSize --model_path $modelPath --grad_acc $gradAcc --data_path2 $dataPath2 --mask_path $maskPath
 
-### 1 dataset problem
+###############################
+
+#### 1 dataset problem ########
 
 # gradAcc=1
 
 # python3 -m torch.distributed.launch --nproc_per_node=$numGPUs new_finetune.py --data_path $dataPath --gene_num $geneNum --model_name $modelName --bin_num $binNum --learning_rate $lr --epoch $epoch --batch_size $batchSize --model_path $modelPath --grad_acc $gradAcc --mask_path $maskPath
+
+###############################
 
 mv slurm-$SLURM_JOB_ID.out reports/
 sacct -l -j $SLURM_JOB_ID
